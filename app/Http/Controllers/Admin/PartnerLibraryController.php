@@ -20,7 +20,7 @@ class PartnerLibraryController extends Controller
     public function index()
     {
         $categories=VideoLibraryCategory::where('company_id','=',Auth::User()->company_id)->get();
-        $videos= PartnerLibrary::orderBy('id','DESC')->where('company_id','=',Auth::User()->company_id)->get();;
+        $videos= PartnerLibrary::orderBy('id','DESC')->where('company_id','=',Auth::User()->company_id)->get();
 
         if (Auth::user()->hasRole('Admin')) {
             return view('dashboard2.partnerlibrary.index', compact('videos', 'categories'));
@@ -125,8 +125,8 @@ class PartnerLibraryController extends Controller
 
     public function view()
     {
-        $categories=VideoLibraryCategory::all();
-        $videos= PartnerLibrary::orderBy('id','DESC')->get();
+        $categories=VideoLibraryCategory::where('company_id','=',Auth::User()->company_id)->get();
+        $videos= PartnerLibrary::orderBy('id','DESC')->where('company_id','=',Auth::User()->company_id)->get();
         return view('dashboard1.partnerlibrary.index',compact('videos','categories'));
     }
 

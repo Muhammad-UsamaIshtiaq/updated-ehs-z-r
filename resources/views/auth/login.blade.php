@@ -6,7 +6,7 @@
 	<!--begin::Head-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
-		<title>City Wide Mechanical</title>
+		<title>DFWCZ</title>
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->

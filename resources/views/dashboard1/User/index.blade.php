@@ -272,7 +272,7 @@
                                         <div class="row">
                                             <div class="col-12 py-2">
                                                 <button type="button" class="btn btn-secondary show-plan">Training Plan</button>
-                                                <button type="button" class="btn btn-outline-primary show-course">Assign Courses</button>
+                                                <button type="button" class="btn btn-outline-primary show-course">Assigned Courses</button>
                                                 <button type="button" class="btn btn-outline-primary show-eq">Certificates</button>
                                                 <button type="button" class="btn btn-outline-primary show-gr">Groups/Classes</button>
                                                 <button type="button" class="btn btn-outline-primary show-loc">Locations</button>
