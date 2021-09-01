@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://nctrca.org/xmlrpc.php">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - NCTRCA</title>
+	<link rel="canonical" href="https://nctrca.org/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home - NCTRCA" />
+	<meta property="og:description" content="Welcome to the North Central Texas Regional Certification Agency The North Central Texas Regional Certification Agency (NCTRCA) is a 501 (c)(3) non-profit corporate organization that represents various public and private entities in the North Texas area. It is the policy of these entities that Disadvantaged Business Enterprises (DBEs), Minority Business Enterprises (MBEs), Woman-owned Business Enterprises [&hellip;]" />
+	<meta property="og:url" content="https://nctrca.org/" />
+	<meta property="og:site_name" content="NCTRCA" />
+	<meta property="article:modified_time" content="2021-07-02T13:46:44+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="1 minute" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://nctrca.org/#website","url":"https://nctrca.org/","name":"NCTRCA","description":"North Central Texas Regional Certification Agency","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://nctrca.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://nctrca.org/#webpage","url":"https://nctrca.org/","name":"Home - NCTRCA","isPartOf":{"@id":"https://nctrca.org/#website"},"datePublished":"2018-06-28T15:35:08+00:00","dateModified":"2021-07-02T13:46:44+00:00","breadcrumb":{"@id":"https://nctrca.org/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://nctrca.org/"]}]},{"@type":"BreadcrumbList","@id":"https://nctrca.org/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="NCTRCA &raquo; Feed" href="https://nctrca.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NCTRCA &raquo; Comments Feed" href="https://nctrca.org/comments/feed/" />
+		<!-- This site uses the Google Analytics by ExactMetrics plugin v6.8.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+		<!-- Note: ExactMetrics is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the ExactMetrics settings panel. -->
+					<!-- No UA code set -->
+				<!-- / Google Analytics by ExactMetrics -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/nctrca.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='bootstrap-css'  href='https://nctrca.org/wp-content/themes/nctrcatheme/bootstrap.min.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://nctrca.org/wp-includes/css/dist/block-library/style.min.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://nctrca.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='crellyslider.min-css'  href='https://nctrca.org/wp-content/plugins/crelly-slider/css/crellyslider.min.css?ver=1.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='siteorigin-panels-front-css'  href='https://nctrca.org/wp-content/plugins/siteorigin-panels/css/front-flex.min.css?ver=2.13.0' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css'  href='https://nctrca.org/wp-content/uploads/maxmegamenu/style.css?ver=73407b' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://nctrca.org/wp-includes/css/dashicons.min.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/style.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-bootstrap-css-css'  href='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/css/bootstrap.min.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-fontawesome-cdn-css'  href='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/css/fontawesome.min.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-bootstrap-starter-style-css'  href='https://nctrca.org/wp-content/themes/nctrcatheme/style.css?ver=5.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bfa-font-awesome-css'  href='https://use.fontawesome.com/releases/v5.15.3/css/all.css?ver=2.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bfa-font-awesome-v4-shim-css'  href='https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css?ver=2.0.1' type='text/css' media='all' />
+<style id='bfa-font-awesome-v4-shim-inline-css' type='text/css'>
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-brands-400.eot'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-brands-400.woff2') format('woff2'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-brands-400.woff') format('woff'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-brands-400.ttf') format('truetype'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-brands-400.svg#fontawesome') format('svg');
+			}
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-solid-900.eot'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-solid-900.woff2') format('woff2'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-solid-900.woff') format('woff'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-solid-900.ttf') format('truetype'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-solid-900.svg#fontawesome') format('svg');
+			}
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-regular-400.eot'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-regular-400.woff2') format('woff2'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-regular-400.woff') format('woff'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-regular-400.ttf') format('truetype'),
+				url('https://use.fontawesome.com/releases/v5.15.3/webfonts/fa-regular-400.svg#fontawesome') format('svg');
+				unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
+			}
+		
+</style>
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/crelly-slider/js/jquery.crellyslider.min.js?ver=1.4.4' id='jquery.crellyslider.min-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/nctrcatheme/custom-script.js?ver=5.8' id='custom-scripts-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/nctrcatheme/bootstrap.min.js?ver=5.8' id='bootstrap-scripts-js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/js/html5.js?ver=3.7.0' id='html5hiv-js'></script>
+<![endif]-->
+<link rel="https://api.w.org/" href="https://nctrca.org/wp-json/" /><link rel="alternate" type="application/json" href="https://nctrca.org/wp-json/wp/v2/pages/9" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nctrca.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://nctrca.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8" />
+<link rel='shortlink' href='https://nctrca.org/' />
+<link rel="alternate" type="application/json+oembed" href="https://nctrca.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnctrca.org%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://nctrca.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnctrca.org%2F&#038;format=xml" />
+<link media="all" type="text/css" rel="stylesheet" href="https://nctrca.org/wp-content/themes/nctrcatheme/style.css"><link rel="pingback" href="https://nctrca.org/xmlrpc.php">    <style type="text/css">
+        #page-sub-header { background: #fff; }
+    </style>
+                    <style type="text/css" media="all"
+                       id="siteorigin-panels-layouts-head">/* Layout 9 */ #pgc-9-0-0 , #pgc-9-1-0 , #pgc-9-2-0 { width:100%;width:calc(100% - ( 0 * 30px ) ) } #pg-9-0 , #pg-9-1 , #pl-9 .so-panel { margin-bottom:30px } #pg-9-2 , #pg-9-3 , #pl-9 .so-panel:last-of-type { margin-bottom:0px } #pgc-9-3-0 { width:100% } #pg-9-0.panel-no-style, #pg-9-0.panel-has-style > .panel-row-style , #pg-9-1.panel-no-style, #pg-9-1.panel-has-style > .panel-row-style , #pg-9-2.panel-no-style, #pg-9-2.panel-has-style > .panel-row-style , #pg-9-3.panel-no-style, #pg-9-3.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-9-0.panel-no-style, #pg-9-0.panel-has-style > .panel-row-style , #pg-9-1.panel-no-style, #pg-9-1.panel-has-style > .panel-row-style , #pg-9-2.panel-no-style, #pg-9-2.panel-has-style > .panel-row-style , #pg-9-3.panel-no-style, #pg-9-3.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-9-0 > .panel-grid-cell , #pg-9-0 > .panel-row-style > .panel-grid-cell , #pg-9-1 > .panel-grid-cell , #pg-9-1 > .panel-row-style > .panel-grid-cell , #pg-9-2 > .panel-grid-cell , #pg-9-2 > .panel-row-style > .panel-grid-cell , #pg-9-3 > .panel-grid-cell , #pg-9-3 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pg-9-0 , #pg-9-1 , #pg-9-2 , #pg-9-3 { margin-bottom:px } #pl-9 .panel-grid-cell { padding:0 } #pl-9 .panel-grid .panel-grid-cell-empty { display:none } #pl-9 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } </style><link rel="icon" href="https://nctrca.org/wp-content/uploads/2018/08/NCTRCA-Icon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://nctrca.org/wp-content/uploads/2018/08/NCTRCA-Icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://nctrca.org/wp-content/uploads/2018/08/NCTRCA-Icon.png" />
+<meta name="msapplication-TileImage" content="https://nctrca.org/wp-content/uploads/2018/08/NCTRCA-Icon.png" />
+<style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+
+<body class="home page-template page-template-fullwidth page-template-fullwidth-php page page-id-9 siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home mega-menu-primary">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    	<header id="masthead" class="site-header navbar-static-top navbar-light" role="banner">
+        <div class="container">
+        	<div class="left-area">
+                <div class="navbar-brand">
+                                            <a href="https://nctrca.org/">
+                            <img src="https://nctrca.org/wp-content/uploads/2018/08/NCTRCA-Logo.png" alt="NCTRCA">
+                        </a>
+                        
+                </div>
+         	</div>
+            <div class="right-area">
+            	                    <div class="top_company_info">
+                        <div><div id="pl-w60de1790cc838"  class="panel-layout" ><div id="pg-w60de1790cc838-0"  class="panel-grid panel-has-style" ><div class="top-info-area panel-row-style panel-row-style-for-w60de1790cc838-0" ><div id="pgc-w60de1790cc838-0-0"  class="panel-grid-cell" ><div id="panel-w60de1790cc838-0-0-0" class="so-panel widget widget_siteorigin-panels-builder panel-first-child panel-last-child" data-index="0" ><div id="pl-w60de1790cc893"  class="panel-layout" ><div id="pg-w60de1790cc893-0"  class="panel-grid panel-has-style" ><div class="siteorigin-panels-stretch panel-row-style panel-row-style-for-w60de1790cc893-0" data-stretch-type="full" ><div id="pgc-w60de1790cc893-0-0"  class="panel-grid-cell" ><div id="panel-w60de1790cc893-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0" ><div class="apply-area panel-widget-style panel-widget-style-for-w60de1790cc893-0-0-0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<p><a target="_blank" href="https://nctrca.mwdbe.com/FrontEnd/StartCertification.asp?TN=nctrca&XID=7565" rel="noopener"><i class="fa fa-file-text-o " ></i> Apply Online</a></p>
+</div>
+</div></div></div></div></div></div><div id="pg-w60de1790cc893-1"  class="panel-grid panel-has-style" ><div class="nctrca-info siteorigin-panels-stretch panel-row-style panel-row-style-for-w60de1790cc893-1" data-stretch-type="full" ><div id="pgc-w60de1790cc893-1-0"  class="panel-grid-cell" ><div id="panel-w60de1790cc893-1-0-0" class="so-panel widget widget_search panel-first-child panel-last-child" data-index="1" ><div class="search-area panel-widget-style panel-widget-style-for-w60de1790cc893-1-0-0" ><form role="search" method="get" class="search-form" action="https://nctrca.org/">
+    <label>
+        <input type="search" class="search-field form-control" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+    </label>
+    <input type="submit" class="search-submit btn btn-default" value="Search">
+</form>
+
+
+
+</div></div></div><div id="pgc-w60de1790cc893-1-1"  class="panel-grid-cell" ><div id="panel-w60de1790cc893-1-1-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="2" ><div class="contact-area panel-widget-style panel-widget-style-for-w60de1790cc893-1-1-0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<p><a href="https://nctrca.org/contact-nctrca/"><i class="fa fa-map-marker " ></i></a></p>
+</div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div>                    </div><!-- #top company social  -->
+                        	</div>        
+        </div>
+
+	</header><!-- #masthead -->
+    
+            <div class="menu-area">
+        	<div class="menu-container">
+            	<div><div id="mega-menu-wrap-primary" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-primary" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="1024" data-unbind="true" data-mobile-state="collapse_all" data-hover-intent-timeout="300" data-hover-intent-interval="100"><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-home mega-current-menu-item mega-page_item mega-page-item-9 mega-current_page_item mega-align-bottom-left mega-menu-flyout mega-menu-item-38' id='mega-menu-item-38'><a class="mega-menu-link" href="https://nctrca.org/" tabindex="0">Home</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-496' id='mega-menu-item-496'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">About Us<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-508' id='mega-menu-item-508'><a class="mega-menu-link" href="https://nctrca.org/about-nctrca/">About NCTRCA</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-359' id='mega-menu-item-359'><a class="mega-menu-link" href="https://nctrca.org/our-staff/">Staff</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-631' id='mega-menu-item-631'><a class="mega-menu-link" href="https://nctrca.org/board-members/">Board Members</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-497' id='mega-menu-item-497'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Members<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-295' id='mega-menu-item-295'><a class="mega-menu-link" href="https://nctrca.org/member-entities/">Member Entities</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-621' id='mega-menu-item-621'><a class="mega-menu-link" href="https://nctrca.org/member-area/">Member Area</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-798' id='mega-menu-item-798'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Certification<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-799' id='mega-menu-item-799'><a class="mega-menu-link" href="https://nctrca.org/certification/">Certification Criteria</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-548' id='mega-menu-item-548'><a class="mega-menu-link" href="https://nctrca.org/acdbe-dbe-certification/">ACDBE/DBE</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-547' id='mega-menu-item-547'><a class="mega-menu-link" href="https://nctrca.org/sbe-certification/">SBE</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-546' id='mega-menu-item-546'><a class="mega-menu-link" href="https://nctrca.org/m-wbe-certification/">M/WBE</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-549' id='mega-menu-item-549'><a class="mega-menu-link" href="https://nctrca.org/renewal/">Renewal</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-723' id='mega-menu-item-723'><a class="mega-menu-link" href="https://nctrca.org/application-fee/">Application Fee</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-425' id='mega-menu-item-425'><a class="mega-menu-link" href="https://nctrca.org/whats-next/">What's Next</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-498' id='mega-menu-item-498'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Resources<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-350' id='mega-menu-item-350'><a class="mega-menu-link" href="https://nctrca.org/procedures-manual/">Procedures Manual</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-580' id='mega-menu-item-580'><a class="mega-menu-link" href="https://nctrca.org/application-forms/">Application Forms</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-644' id='mega-menu-item-644'><a class="mega-menu-link" href="https://nctrca.org/related-sites/">Related Sites</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-643' id='mega-menu-item-643'><a target="_blank" class="mega-menu-link" href="https://nctrca.org/wp-content/uploads/2019/08/DMWBE-Survey.pdf">D/S/M/WBE Survey</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-645' id='mega-menu-item-645'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Opportunities<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-422' id='mega-menu-item-422'><a class="mega-menu-link" href="https://nctrca.org/nctrca-solicitations/">NCTRCA Solicitations</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-653' id='mega-menu-item-653'><a class="mega-menu-link" href="https://nctrca.org/member-solicitations/">Member Solicitations</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-align-bottom-left mega-menu-flyout mega-menu-item-360' id='mega-menu-item-360'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Events<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-658' id='mega-menu-item-658'><a class="mega-menu-link" href="https://nctrca.org/nctrca-board-meetings/">Board Meetings</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-499' id='mega-menu-item-499'><a class="mega-menu-link" href="https://nctrca.org/upcoming-events/">Upcoming Events</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-404' id='mega-menu-item-404'><a class="mega-menu-link" href="https://nctrca.org/activities/">Activities</a></li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-356' id='mega-menu-item-356'><a class="mega-menu-link" href="https://nctrca.org/frequently-asked-questions/" tabindex="0">FAQs</a></li><li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-429' id='mega-menu-item-429'><a class="mega-menu-link" href="https://nctrca.org/contact-nctrca/" tabindex="0">Contact Us</a></li></ul></div></div>            </div>
+        </div><!-- #menu area -->
+    
+	<div id="content" class="site-content">
+		<div class="container">
+			<div class="row">
+                
+	<section id="primary" class="content-area col-sm-12">
+		<main id="main" class="site-main" role="main">
+
+			
+<article id="post-9" class="post-9 page type-page status-publish hentry">
+	<div class="entry-content">
+		<div id="pl-9"  class="panel-layout" ><div id="pg-9-0"  class="panel-grid panel-has-style" ><div class="slider-area siteorigin-panels-stretch panel-row-style panel-row-style-for-9-0" data-stretch-type="full-stretched" ><div id="pgc-9-0-0"  class="panel-grid-cell" ><div id="panel-9-0-0-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="0" ><div class="widget_text rotator panel-widget-style panel-widget-style-for-9-0-0-0" ><div class="textwidget custom-html-widget"><div class="carousel-form">
+   <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000" data-pause="false">
+   
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+         <div class="item first-slide active">
+            <img class="first-slide" src="https://nctrca.org/wp-content/uploads/2021/07/homepage-pic_img.jpg" alt=""/>
+            <div class="container">
+               <div class="carousel-caption first animated bounceInUp imageText" id="imageText1"></div>	 
+            </div>
+         </div>
+         <div class="item second-slide">
+            <img class="second-slide" src="https://nctrca.org/wp-content/uploads/2021/07/feature-hp-slide-img.jpg" alt=""/>
+            <div class="container">
+               <div class="carousel-caption animated flipInX imageText" id="imageText2"></div>
+            </div>
+         </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">      
+      	 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>       
+         <span class="sr-only">Next</span></a>
+   </div>
+</div></div></div></div></div></div></div><div id="pg-9-1"  class="panel-grid panel-has-style" ><div class="hp-welcome siteorigin-panels-stretch panel-row-style panel-row-style-for-9-1" data-stretch-type="full-stretched" ><div id="pgc-9-1-0"  class="panel-grid-cell" ><div id="panel-9-1-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="1" ><div class="HP-content panel-widget-style panel-widget-style-for-9-1-0-0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<h1>Welcome to the North Central Texas Regional Certification Agency</h1>
+<p>The North Central Texas Regional Certification Agency (NCTRCA) is a 501 (c)(3) non-profit corporate organization that represents various public and private entities in the North Texas area.  It is the policy of these entities that Disadvantaged Business Enterprises (DBEs), Minority Business Enterprises (MBEs), Woman-owned Business Enterprises (WBEs), and Small Business Enterprises (SBEs) have the maximum practical opportunity to participate in their contracting and purchasing activities.<br />
+<a class="button" href="https://nctrca.mwdbe.com/FrontEnd/StartCertification.asp?TN=nctrca&XID=7565"><i class="fa fa-chevron-circle-right " ></i> Apply Online</a></p>
+</div>
+</div></div></div></div></div></div><div id="pg-9-2"  class="panel-grid panel-has-style" ><div class="specialize-area siteorigin-panels-stretch panel-row-style panel-row-style-for-9-2" data-stretch-type="full" ><div id="pgc-9-2-0"  class="panel-grid-cell" ><div id="panel-9-2-0-0" class="so-panel widget widget_siteorigin-panels-builder panel-first-child panel-last-child" data-index="2" ><div id="pl-w5ec6d2e356920"  class="panel-layout" ><div id="pg-w5ec6d2e356920-0"  class="panel-grid panel-has-style" ><div class="title-shadow siteorigin-panels-stretch panel-row-style panel-row-style-for-w5ec6d2e356920-0" data-stretch-type="full" ><div id="pgc-w5ec6d2e356920-0-0"  class="panel-grid-cell" ><div id="panel-w5ec6d2e356920-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<h2>We Specialize In</h2>
+</div>
+</div></div></div></div></div><div id="pg-w5ec6d2e356920-1"  class="panel-grid panel-has-style" ><div class="cert-row panel-row-style panel-row-style-for-w5ec6d2e356920-1" ><div id="pgc-w5ec6d2e356920-1-0"  class="panel-grid-cell" ><div id="panel-w5ec6d2e356920-1-0-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="1" ><div class="widget_text cert-item panel-widget-style panel-widget-style-for-w5ec6d2e356920-1-0-0" ><div class="textwidget custom-html-widget"><a href="https://nctrca.org/acdbe-dbe-certification/">
+<i class="fa fa-clone " ></i>
+
+DBE
+Certification
+</a></div></div></div></div><div id="pgc-w5ec6d2e356920-1-1"  class="panel-grid-cell panel-grid-cell-empty" ></div><div id="pgc-w5ec6d2e356920-1-2"  class="panel-grid-cell" ><div id="panel-w5ec6d2e356920-1-2-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="2" ><div class="widget_text cert-item panel-widget-style panel-widget-style-for-w5ec6d2e356920-1-2-0" ><div class="textwidget custom-html-widget"><a href="https://nctrca.org/m-wbe-certification/">
+<i class="fa fa-clone " ></i>
+
+MBE
+Certification
+</a></div></div></div></div><div id="pgc-w5ec6d2e356920-1-3"  class="panel-grid-cell panel-grid-cell-empty" ></div><div id="pgc-w5ec6d2e356920-1-4"  class="panel-grid-cell" ><div id="panel-w5ec6d2e356920-1-4-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="3" ><div class="widget_text cert-item panel-widget-style panel-widget-style-for-w5ec6d2e356920-1-4-0" ><div class="textwidget custom-html-widget"><a href="https://nctrca.org/m-wbe-certification/">
+<i class="fa fa-clone " ></i>
+
+WBE
+Certification
+</a></div></div></div></div></div></div><div id="pg-w5ec6d2e356920-2"  class="panel-grid panel-has-style" ><div class="cert-row last panel-row-style panel-row-style-for-w5ec6d2e356920-2" ><div id="pgc-w5ec6d2e356920-2-0"  class="panel-grid-cell panel-grid-cell-empty" ></div><div id="pgc-w5ec6d2e356920-2-1"  class="panel-grid-cell" ><div id="panel-w5ec6d2e356920-2-1-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="4" ><div class="widget_text cert-item panel-widget-style panel-widget-style-for-w5ec6d2e356920-2-1-0" ><div class="textwidget custom-html-widget"><a href="https://nctrca.org/acdbe-dbe-certification/">
+<i class="fa fa-clone " ></i>
+
+ACDBE
+Certification
+</a></div></div></div></div><div id="pgc-w5ec6d2e356920-2-2"  class="panel-grid-cell panel-grid-cell-empty" ></div><div id="pgc-w5ec6d2e356920-2-3"  class="panel-grid-cell panel-grid-cell-mobile-last" ><div id="panel-w5ec6d2e356920-2-3-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="5" ><div class="widget_text cert-item panel-widget-style panel-widget-style-for-w5ec6d2e356920-2-3-0" ><div class="textwidget custom-html-widget"><a href="https://nctrca.org/sbe-certification/">
+<i class="fa fa-clone " ></i>
+
+SBE
+Certification
+</a></div></div></div></div><div id="pgc-w5ec6d2e356920-2-4"  class="panel-grid-cell panel-grid-cell-empty" ></div></div></div></div></div></div></div></div><div id="pg-9-3"  class="panel-grid panel-has-style" ><div class="member-area panel-row-style panel-row-style-for-9-3" ><div id="pgc-9-3-0"  class="panel-grid-cell" ><div id="panel-9-3-0-0" class="so-panel widget widget_siteorigin-panels-builder panel-first-child panel-last-child" data-index="3" ><div id="pl-w5df9020e1caa0"  class="panel-layout" ><div id="pg-w5df9020e1caa0-0"  class="panel-grid panel-no-style" ><div id="pgc-w5df9020e1caa0-0-0"  class="panel-grid-cell" ><div id="panel-w5df9020e1caa0-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<h2 class="line-item">Our Members</h2>
+</div>
+</div></div></div></div><div id="pg-w5df9020e1caa0-1"  class="panel-grid panel-no-style" ><div id="pgc-w5df9020e1caa0-1-0"  class="panel-grid-cell" ><div id="panel-w5df9020e1caa0-1-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="1" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<div class='white' style='background:rgba(0,0,0,0); border:solid 0px rgba(0,0,0,0); border-radius:0px; padding:0px 0px 0px 0px;'>
+<div id='slider_490' class='owl-carousel sa_owl_theme owl-pagination-true autohide-arrows' data-slider-id='slider_490' style='visibility:hidden;'>
+<div id='slider_490_slide01' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/austin-ind.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='http://www.austin-ind.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide02' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/City_of_Arlington-logo.png&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://arlingtontx.gov/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide03' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/dallas-city-hall.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://dallascityhall.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide04' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/fort-worth.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.fortworthtexas.gov/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide05' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/City_of_Irving.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.cityofirving.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide06' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/city-mesquite.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.cityofmesquite.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide07' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/dart.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.dart.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide08' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/dallas-county.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.dallascounty.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide09' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/dcccd.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.dallascollege.edu/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide10' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/dfw-international.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='http://www.dfwairport.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide11' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/DISD-LOGO-CMYK-Blue.png&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.dallasisd.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide12' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/ferrovial-logo.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.ferrovial.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide13' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/Trinity-Metro-Logo.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://ridetrinitymetro.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide14' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/ntta.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.ntta.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide15' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/tarrant-college.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.tccd.edu/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide16' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/trwd.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.trwd.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide17' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/FWISD-Logo.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.fwisd.org/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide18' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/City-of-Cedar-Hill-logo.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='http://www.cedarhilltx.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide19' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2019/08/tarrant-county-logo.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='http://www.tarrantcounty.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide20' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2020/05/city-of-desoto-img.jpeg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.ci.desoto.tx.us/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide21' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2020/05/city-of-lancaster-img.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.lancaster-tx.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide22' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2020/05/City-of-Duncanville-img.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.duncanville.com/' target='_blank'></a></div>
+</div>
+<div id='slider_490_slide23' class='sa_hover_container' style='padding:5% 5.4%; margin:0px 5%; background-image:url(&quot;https://nctrca.org/wp-content/uploads/2021/07/parkland-logo.jpg&quot;); background-position:center center; background-size:contain; background-repeat:no-repeat; '><div class='sa_hover_buttons' style='top:50%; left:50%; margin-top:-20px; margin-left:-20px;'><a class='sa_slide_link_icon' href='https://www.parklandhospital.com/' target='_blank'></a></div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+	jQuery(document).ready(function() {
+		jQuery('#slider_490').owlCarousel({
+			responsive:{
+				0:{ items:1 },
+				480:{ items:1 },
+				768:{ items:3 },
+				980:{ items:3 },
+				1200:{ items:4 },
+				1500:{ items:4 }
+			},
+			autoplay : true,
+			autoplayTimeout : 5000,
+			autoplayHoverPause : true,
+			smartSpeed : 200,
+			fluidSpeed : 200,
+			autoplaySpeed : 200,
+			navSpeed : 200,
+			dotsSpeed : 200,
+			loop : true,
+			nav : true,
+			navText : ['Previous','Next'],
+			dots : true,
+			responsiveRefreshRate : 200,
+			slideBy : 4,
+			mergeFit : true,
+			autoHeight : false,
+			mouseDrag : false,
+			touchDrag : true
+		});
+		jQuery('#slider_490').css('visibility', 'visible');
+		sa_resize_slider_490();
+		window.addEventListener('resize', sa_resize_slider_490);
+		function sa_resize_slider_490() {
+			var min_height = '50';
+			var win_width = jQuery(window).width();
+			var slider_width = jQuery('#slider_490').width();
+			if (win_width < 480) {
+				var slide_width = slider_width / 1;
+			} else if (win_width < 768) {
+				var slide_width = slider_width / 1;
+			} else if (win_width < 980) {
+				var slide_width = slider_width / 3;
+			} else if (win_width < 1200) {
+				var slide_width = slider_width / 3;
+			} else if (win_width < 1500) {
+				var slide_width = slider_width / 4;
+			} else {
+				var slide_width = slider_width / 4;
+			}
+			slide_width = Math.round(slide_width);
+			var slide_height = '0';
+			if (min_height == 'aspect43') {
+				slide_height = (slide_width / 4) * 3;				slide_height = Math.round(slide_height);
+			} else if (min_height == 'aspect169') {
+				slide_height = (slide_width / 16) * 9;				slide_height = Math.round(slide_height);
+			} else {
+				slide_height = (slide_width / 100) * min_height;				slide_height = Math.round(slide_height);
+			}
+			jQuery('#slider_490 .owl-item .sa_hover_container').css('min-height', slide_height+'px');
+		}
+		var owl_goto = jQuery('#slider_490');
+		jQuery('.slider_490_goto1').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 0);
+		});
+		jQuery('.slider_490_goto2').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 1);
+		});
+		jQuery('.slider_490_goto3').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 2);
+		});
+		jQuery('.slider_490_goto4').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 3);
+		});
+		jQuery('.slider_490_goto5').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 4);
+		});
+		jQuery('.slider_490_goto6').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 5);
+		});
+		jQuery('.slider_490_goto7').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 6);
+		});
+		jQuery('.slider_490_goto8').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 7);
+		});
+		jQuery('.slider_490_goto9').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 8);
+		});
+		jQuery('.slider_490_goto10').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 9);
+		});
+		jQuery('.slider_490_goto11').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 10);
+		});
+		jQuery('.slider_490_goto12').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 11);
+		});
+		jQuery('.slider_490_goto13').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 12);
+		});
+		jQuery('.slider_490_goto14').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 13);
+		});
+		jQuery('.slider_490_goto15').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 14);
+		});
+		jQuery('.slider_490_goto16').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 15);
+		});
+		jQuery('.slider_490_goto17').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 16);
+		});
+		jQuery('.slider_490_goto18').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 17);
+		});
+		jQuery('.slider_490_goto19').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 18);
+		});
+		jQuery('.slider_490_goto20').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 19);
+		});
+		jQuery('.slider_490_goto21').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 20);
+		});
+		jQuery('.slider_490_goto22').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 21);
+		});
+		jQuery('.slider_490_goto23').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 22);
+		});
+		var resize_490 = jQuery('.owl-carousel');
+		resize_490.on('initialized.owl.carousel', function(e) {
+			if (typeof(Event) === 'function') {
+				window.dispatchEvent(new Event('resize'));
+			} else {
+				var evt = window.document.createEvent('UIEvents');
+				evt.initUIEvent('resize', true, false, window, 0);
+				window.dispatchEvent(evt);
+			}
+		});
+	});
+</script>
+
+</div>
+</div></div></div></div></div></div></div></div></div></div>	</div><!-- .entry-content -->
+</article><!-- #post-## -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- #content -->
+   
+	        <div class="top-footer">
+            <div><div id="pl-w60defff6a8be2"  class="panel-layout" ><div id="pg-w60defff6a8be2-0"  class="panel-grid panel-has-style" ><div class="top-footer-area siteorigin-panels-stretch panel-row-style panel-row-style-for-w60defff6a8be2-0" data-stretch-type="full-stretched" ><div id="pgc-w60defff6a8be2-0-0"  class="panel-grid-cell" ><div id="panel-w60defff6a8be2-0-0-0" class="so-panel widget widget_siteorigin-panels-builder panel-first-child panel-last-child" data-index="0" ><div id="pl-w60defff6a8c53"  class="panel-layout" ><div id="pg-w60defff6a8c53-0"  class="panel-grid panel-has-style" ><div class="siteorigin-panels-stretch panel-row-style panel-row-style-for-w60defff6a8c53-0" data-stretch-type="full" ><div id="pgc-w60defff6a8c53-0-0"  class="panel-grid-cell" ><div id="panel-w60defff6a8c53-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0" ><div class="submit-area panel-widget-style panel-widget-style-for-w60defff6a8c53-0-0-0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<p><em>Submit your certification application online.</em></p>
+<p><a class="button" target="_blank" href="https://nctrca.mwdbe.com/FrontEnd/StartCertification.asp?TN=nctrca&XID=7565" rel="noopener"><i class="fa fa-chevron-circle-right " ></i> Apply Online</a></p>
+</div>
+</div></div></div></div><div id="pgc-w60defff6a8c53-0-1"  class="panel-grid-cell" ><div id="panel-w60defff6a8c53-0-1-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="1" ><div class="survey-area panel-widget-style panel-widget-style-for-w60defff6a8c53-0-1-0" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<p><em>How are we doing?</em></p>
+<p><a class="button" target="_blank" href="https://www.surveymonkey.com/r/QNZ6ZW6" rel="noopener"><i class="fa fa-chevron-circle-right " ></i> Survery</a></p>
+</div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div>        </div><!-- #top company social  -->
+                
+    	<footer id="colophon" class="site-footer navbar-light" role="contentinfo">
+    	<div class="footer-top">
+            <div class="container pt-3 pb-3">
+                <div class="site-footer">
+                                            <div class="footer-area">
+                            <div><div id="pl-w60df001f64dbd"  class="panel-layout" ><div id="pg-w60df001f64dbd-0"  class="panel-grid panel-no-style" ><div id="pgc-w60df001f64dbd-0-0"  class="panel-grid-cell" ><div id="panel-w60df001f64dbd-0-0-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="0" ><div class="menu-footer-1-container"><ul id="menu-footer-1" class="menu"><li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-216"><a href="https://nctrca.org/" aria-current="page">Home</a></li>
+<li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-438"><a href="https://nctrca.org/member-entities/">Member Entities</a></li>
+<li id="menu-item-664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-664"><a href="https://nctrca.org/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-440"><a href="https://nctrca.org/contact-nctrca/">Contact Us</a></li>
+</ul></div></div></div><div id="pgc-w60df001f64dbd-0-1"  class="panel-grid-cell" ><div id="panel-w60df001f64dbd-0-1-0" class="so-panel widget widget_nav_menu panel-first-child panel-last-child" data-index="1" ><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-237"><a href="https://nctrca.mwdbe.com/?TN=nctrca">Apply Online</a></li>
+<li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-461"><a href="https://nctrca.org/upcoming-events/">Events</a></li>
+<li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="https://nctrca.org/application-forms/">Application Forms</a></li>
+<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462"><a href="https://nctrca.org/nctrca-board-meetings/">NCTRCA Board Meetings</a></li>
+<li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="https://nctrca.org/related-sites/">Related Sites</a></li>
+</ul></div></div></div><div id="pgc-w60df001f64dbd-0-2"  class="panel-grid-cell" ><div id="panel-w60df001f64dbd-0-2-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="2" ><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<p><strong>NCTRCA</strong> - North Central Texas Regional Certification Agency</p>
+<p>2261 Brookhollow Plaza Drive, Suite 300<br />
+Arlington, TX 76006</p>
+<p>Phone: <a href="tel: 817-640-0606">(817) 640-0606</a><br />
+Phone: <a href="tel: 817-640-6315">(817) 640-6315 </a></p>
+<p>Email: <a href="mailto:mail@nctrca.org">mail@nctrca.org</a></p>
+</div>
+</div></div></div></div></div></div>                        </div><!-- #Footer Area -->
+                                    </div><!-- close .site-info -->
+            </div>
+         </div>
+         <div class="footer-bottom">   
+            <div class="container pt-3 pb-3">
+                <div class="site-footer-bottom">
+                    &copy; 2021 <a href="https://nctrca.org">NCTRCA</a>. All rights reserved.
+                </div><!-- close .site-info -->
+            </div>
+    	</div> 
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+                <style type="text/css" media="all"
+                       id="siteorigin-panels-layouts-footer">/* Layout w60de1790cc893 */ #pgc-w60de1790cc893-0-0 { width:100% } #pg-w60de1790cc893-0 , #pg-w60de1790cc893-1 , #pl-w60de1790cc893 .so-panel:last-of-type { margin-bottom:0px } #pgc-w60de1790cc893-1-0 { width:84.9791% } #pgc-w60de1790cc893-1-1 { width:15.0209% } #pl-w60de1790cc893 .so-panel { margin-bottom:30px } #pg-w60de1790cc893-0.panel-no-style, #pg-w60de1790cc893-0.panel-has-style > .panel-row-style , #pg-w60de1790cc893-1.panel-no-style, #pg-w60de1790cc893-1.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-w60de1790cc893-0.panel-no-style, #pg-w60de1790cc893-0.panel-has-style > .panel-row-style , #pg-w60de1790cc893-1.panel-no-style, #pg-w60de1790cc893-1.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w60de1790cc893-0 > .panel-grid-cell , #pg-w60de1790cc893-0 > .panel-row-style > .panel-grid-cell , #pg-w60de1790cc893-1 > .panel-grid-cell , #pg-w60de1790cc893-1 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pg-w60de1790cc893-0 , #pg-w60de1790cc893-1 { margin-bottom:px } #pgc-w60de1790cc893-1-0 { margin-bottom:30px } #pl-w60de1790cc893 .panel-grid-cell { padding:0 } #pl-w60de1790cc893 .panel-grid .panel-grid-cell-empty { display:none } #pl-w60de1790cc893 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } /* Layout w60de1790cc838 */ #pgc-w60de1790cc838-0-0 { width:100% } #pg-w60de1790cc838-0 , #pl-w60de1790cc838 .so-panel:last-of-type { margin-bottom:0px } #pl-w60de1790cc838 .so-panel { margin-bottom:30px } #pg-w60de1790cc838-0.panel-no-style, #pg-w60de1790cc838-0.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-w60de1790cc838-0.panel-no-style, #pg-w60de1790cc838-0.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w60de1790cc838-0 > .panel-grid-cell , #pg-w60de1790cc838-0 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pg-w60de1790cc838-0 { margin-bottom:px } #pl-w60de1790cc838 .panel-grid-cell { padding:0 } #pl-w60de1790cc838 .panel-grid .panel-grid-cell-empty { display:none } #pl-w60de1790cc838 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } /* Layout w5ec6d2e356920 */ #pgc-w5ec6d2e356920-0-0 { width:100%;width:calc(100% - ( 0 * 30px ) ) } #pg-w5ec6d2e356920-0 , #pg-w5ec6d2e356920-1 , #pl-w5ec6d2e356920 .so-panel { margin-bottom:30px } #pgc-w5ec6d2e356920-1-0 , #pgc-w5ec6d2e356920-1-2 , #pgc-w5ec6d2e356920-1-4 , #pgc-w5ec6d2e356920-2-1 { width:30.0067%;width:calc(30.0067% - ( 0.699932840833 * 30px ) ) } #pgc-w5ec6d2e356920-1-1 { width:5.0235%;width:calc(5.0235% - ( 0.9497649429147 * 30px ) ) } #pgc-w5ec6d2e356920-1-3 { width:4.9563%;width:calc(4.9563% - ( 0.950436534587 * 30px ) ) } #pgc-w5ec6d2e356920-2-0 , #pgc-w5ec6d2e356920-2-2 { width:13.35%;width:calc(13.35% - ( 0.866500405698 * 30px ) ) } #pgc-w5ec6d2e356920-2-3 { width:30.0093%;width:calc(30.0093% - ( 0.699907180545 * 30px ) ) } #pgc-w5ec6d2e356920-2-4 { width:13.2841%;width:calc(13.2841% - ( 0.867159167226 * 30px ) ) } #pl-w5ec6d2e356920 .so-panel:last-of-type { margin-bottom:0px } #pg-w5ec6d2e356920-0.panel-no-style, #pg-w5ec6d2e356920-0.panel-has-style > .panel-row-style , #pg-w5ec6d2e356920-1.panel-no-style, #pg-w5ec6d2e356920-1.panel-has-style > .panel-row-style , #pg-w5ec6d2e356920-2.panel-no-style, #pg-w5ec6d2e356920-2.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-w5ec6d2e356920-0.panel-no-style, #pg-w5ec6d2e356920-0.panel-has-style > .panel-row-style , #pg-w5ec6d2e356920-1.panel-no-style, #pg-w5ec6d2e356920-1.panel-has-style > .panel-row-style , #pg-w5ec6d2e356920-2.panel-no-style, #pg-w5ec6d2e356920-2.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w5ec6d2e356920-0 > .panel-grid-cell , #pg-w5ec6d2e356920-0 > .panel-row-style > .panel-grid-cell , #pg-w5ec6d2e356920-1 > .panel-grid-cell , #pg-w5ec6d2e356920-1 > .panel-row-style > .panel-grid-cell , #pg-w5ec6d2e356920-2 > .panel-grid-cell , #pg-w5ec6d2e356920-2 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pg-w5ec6d2e356920-0 , #pg-w5ec6d2e356920-1 , #pg-w5ec6d2e356920-2 { margin-bottom:px } #pgc-w5ec6d2e356920-1-0 , #pgc-w5ec6d2e356920-1-1 , #pgc-w5ec6d2e356920-1-2 , #pgc-w5ec6d2e356920-1-3 , #pgc-w5ec6d2e356920-2-0 , #pgc-w5ec6d2e356920-2-1 , #pgc-w5ec6d2e356920-2-2 , #pgc-w5ec6d2e356920-2-3 { margin-bottom:30px } #pl-w5ec6d2e356920 .panel-grid-cell { padding:0 } #pl-w5ec6d2e356920 .panel-grid .panel-grid-cell-empty { display:none } #pl-w5ec6d2e356920 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } /* Layout w5df9020e1caa0 */ #pgc-w5df9020e1caa0-0-0 , #pgc-w5df9020e1caa0-1-0 { width:100%;width:calc(100% - ( 0 * 30px ) ) } #pg-w5df9020e1caa0-0 , #pl-w5df9020e1caa0 .so-panel { margin-bottom:30px } #pl-w5df9020e1caa0 .so-panel:last-of-type { margin-bottom:0px } #pg-w5df9020e1caa0-0.panel-no-style, #pg-w5df9020e1caa0-0.panel-has-style > .panel-row-style , #pg-w5df9020e1caa0-1.panel-no-style, #pg-w5df9020e1caa0-1.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-w5df9020e1caa0-0.panel-no-style, #pg-w5df9020e1caa0-0.panel-has-style > .panel-row-style , #pg-w5df9020e1caa0-1.panel-no-style, #pg-w5df9020e1caa0-1.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w5df9020e1caa0-0 > .panel-grid-cell , #pg-w5df9020e1caa0-0 > .panel-row-style > .panel-grid-cell , #pg-w5df9020e1caa0-1 > .panel-grid-cell , #pg-w5df9020e1caa0-1 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pg-w5df9020e1caa0-0 , #pg-w5df9020e1caa0-1 { margin-bottom:px } #pl-w5df9020e1caa0 .panel-grid-cell { padding:0 } #pl-w5df9020e1caa0 .panel-grid .panel-grid-cell-empty { display:none } #pl-w5df9020e1caa0 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } /* Layout w60defff6a8c53 */ #pgc-w60defff6a8c53-0-0 , #pgc-w60defff6a8c53-0-1 { width:50% } #pg-w60defff6a8c53-0 , #pl-w60defff6a8c53 .so-panel:last-of-type { margin-bottom:0px } #pl-w60defff6a8c53 .so-panel { margin-bottom:30px } #pg-w60defff6a8c53-0.panel-no-style, #pg-w60defff6a8c53-0.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } #panel-w60defff6a8c53-0-0-0> .panel-widget-style { background-image:url(https://nctrca.org/wp-content/uploads/2018/08/apply-online-background.jpg);background-position:center center;background-size:cover } #panel-w60defff6a8c53-0-1-0> .panel-widget-style { background-image:url(https://nctrca.org/wp-content/uploads/2018/08/survey-background-scaled.jpg);background-position:center center;background-size:cover } @media (max-width:780px){ #pg-w60defff6a8c53-0.panel-no-style, #pg-w60defff6a8c53-0.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w60defff6a8c53-0 > .panel-grid-cell , #pg-w60defff6a8c53-0 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pgc-w60defff6a8c53-0-0 { margin-bottom:30px } #pg-w60defff6a8c53-0 { margin-bottom:px } #pl-w60defff6a8c53 .panel-grid-cell { padding:0 } #pl-w60defff6a8c53 .panel-grid .panel-grid-cell-empty { display:none } #pl-w60defff6a8c53 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } /* Layout w60defff6a8be2 */ #pgc-w60defff6a8be2-0-0 { width:100% } #pg-w60defff6a8be2-0 , #pl-w60defff6a8be2 .so-panel:last-of-type { margin-bottom:0px } #pl-w60defff6a8be2 .so-panel { margin-bottom:30px } #pg-w60defff6a8be2-0> .panel-row-style { padding:0px 0px 0px 0px } #pg-w60defff6a8be2-0.panel-no-style, #pg-w60defff6a8be2-0.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-w60defff6a8be2-0.panel-no-style, #pg-w60defff6a8be2-0.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w60defff6a8be2-0 > .panel-grid-cell , #pg-w60defff6a8be2-0 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pg-w60defff6a8be2-0 { margin-bottom:px } #pl-w60defff6a8be2 .panel-grid-cell { padding:0 } #pl-w60defff6a8be2 .panel-grid .panel-grid-cell-empty { display:none } #pl-w60defff6a8be2 .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px } #pg-w60defff6a8be2-0> .panel-row-style { padding:0px 0px 0px 0px }  } /* Layout w60df001f64dbd */ #pgc-w60df001f64dbd-0-0 , #pgc-w60df001f64dbd-0-1 , #pgc-w60df001f64dbd-0-2 { width:33.3333%;width:calc(33.3333% - ( 0.666666666667 * 30px ) ) } #pl-w60df001f64dbd .so-panel { margin-bottom:30px } #pl-w60df001f64dbd .so-panel:last-of-type { margin-bottom:0px } #pg-w60df001f64dbd-0.panel-no-style, #pg-w60df001f64dbd-0.panel-has-style > .panel-row-style { -webkit-align-items:flex-start;align-items:flex-start } @media (max-width:780px){ #pg-w60df001f64dbd-0.panel-no-style, #pg-w60df001f64dbd-0.panel-has-style > .panel-row-style { -webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column } #pg-w60df001f64dbd-0 > .panel-grid-cell , #pg-w60df001f64dbd-0 > .panel-row-style > .panel-grid-cell { width:100%;margin-right:0 } #pgc-w60df001f64dbd-0-0 , #pgc-w60df001f64dbd-0-1 { margin-bottom:30px } #pg-w60df001f64dbd-0 { margin-bottom:px } #pl-w60df001f64dbd .panel-grid-cell { padding:0 } #pl-w60df001f64dbd .panel-grid .panel-grid-cell-empty { display:none } #pl-w60df001f64dbd .panel-grid .panel-grid-cell-mobile-last { margin-bottom:0px }  } </style><link rel='stylesheet' id='owl_carousel_css-css'  href='https://nctrca.org/wp-content/plugins/slide-anything/owl-carousel/owl.carousel.css?ver=2.2.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='owl_theme_css-css'  href='https://nctrca.org/wp-content/plugins/slide-anything/owl-carousel/sa-owl-theme.css?ver=2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='owl_animate_css-css'  href='https://nctrca.org/wp-content/plugins/slide-anything/owl-carousel/animate.min.css?ver=2.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/nctrca.org\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/js/popper.min.js?ver=5.8' id='wp-bootstrap-starter-popper-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/js/bootstrap.min.js?ver=5.8' id='wp-bootstrap-starter-bootstrapjs-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/js/theme-script.min.js?ver=5.8' id='wp-bootstrap-starter-themejs-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/themes/wp-bootstrap-starter/inc/assets/js/skip-link-focus-fix.min.js?ver=20151215' id='wp-bootstrap-starter-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Lc0sokbAAAAAFmz8gF7INUJ0fhI5Hjent95isnz&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Lc0sokbAAAAAFmz8gF7INUJ0fhI5Hjent95isnz","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.2' id='wpcf7-recaptcha-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/hoverIntent.min.js?ver=1.8.1' id='hoverIntent-js'></script>
+<script type='text/javascript' id='megamenu-js-extra'>
+/* <![CDATA[ */
+var megamenu = {"timeout":"300","interval":"100"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.9.4' id='megamenu-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-includes/js/wp-embed.min.js?ver=5.8' id='wp-embed-js'></script>
+<script type='text/javascript' id='siteorigin-panels-front-styles-js-extra'>
+/* <![CDATA[ */
+var panelsStyles = {"fullContainer":"body"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/siteorigin-panels/js/styling.min.js?ver=2.13.0' id='siteorigin-panels-front-styles-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/slide-anything/owl-carousel/owl.carousel.min.js?ver=2.2.1' id='owl_carousel_js-js'></script>
+<script type='text/javascript' src='https://nctrca.org/wp-content/plugins/slide-anything/js/jquery.mousewheel.min.js?ver=3.1.13' id='mousewheel_js-js'></script>
+<script type="text/javascript">document.body.className = document.body.className.replace("siteorigin-panels-before-js","");</script></body>
+</html>
+<!-- Dynamic page generated in 1.670 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-07-27 19:11:53 -->
+
+<!-- super cache -->
