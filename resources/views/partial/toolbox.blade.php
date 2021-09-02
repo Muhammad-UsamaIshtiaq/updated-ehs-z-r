@@ -320,24 +320,28 @@ Signatured
             var lastPos = mousePos;
 
             canvas.addEventListener("mousedown", function(e) {
+                e.preventDefault()
                 drawing = true;
                 lastPos = getMousePos(canvas, e);
             }, false);
 
             canvas.addEventListener("mouseup", function(e) {
+                e.preventDefault()
                 drawing = false;
             }, false);
 
             canvas.addEventListener("mousemove", function(e) {
+                e.preventDefault()
                 mousePos = getMousePos(canvas, e);
             }, false);
 
             // Add touch event support for mobile
             canvas.addEventListener("touchstart", function(e) {
-
+                e.preventDefault()
             }, false);
 
             canvas.addEventListener("touchmove", function(e) {
+                e.preventDefault()
                 var touch = e.touches[0];
                 var me = new MouseEvent("mousemove", {
                     clientX: touch.clientX,
@@ -347,6 +351,7 @@ Signatured
             }, false);
 
             canvas.addEventListener("touchstart", function(e) {
+                e.preventDefault()
                 mousePos = getTouchPos(canvas, e);
                 var touch = e.touches[0];
                 var me = new MouseEvent("mousedown", {
@@ -357,6 +362,7 @@ Signatured
             }, false);
 
             canvas.addEventListener("touchend", function(e) {
+                e.preventDefault()
                 var me = new MouseEvent("mouseup", {});
                 canvas.dispatchEvent(me);
             }, false);
