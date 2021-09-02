@@ -157,7 +157,7 @@
                     @php $folder='Assign Jobs'; @endphp
 
                     @if(folder_byid($file->folder_id)->type == 'resource')
-                        <iframe src="{{asset('/resources')}}/@if(folder_byid($file->folder_id) != ''){{folder_byid($file->folder_id)->name}}@else{{$folder}}@endif/{{$file->name}}" width="auto" height="1100" />
+                        <iframe src="{{asset('/resources')}}/@if(folder_byid($file->folder_id) != ''){{folder_byid($file->folder_id)->name}}@else{{$folder}}@endif/{{$file->name}}" width="auto" height="1100" ></iframe>
 
                     @endif
                     @if(folder_byid($file->folder_id)->type == 'form')
@@ -198,7 +198,10 @@
 @endsection
 
 @section('js')
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
+    <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
     <script>
                 let images = [];
                  $.each($("select"), function () {
@@ -482,10 +485,7 @@
         })();
 
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script>
-    <script src="https://formbuilder.online/assets/js/form-render.min.js"></script>
+ 
 
     <script>
 
@@ -539,61 +539,61 @@
 
 
     </script>
-
-@endsection
 <script>
 
 
-    var KTDatatableHtmlTableDemo = function() {
-        // Private functions
+var KTDatatableHtmlTableDemo = function() {
+    // Private functions
 
-        // demo initializer
-        var demo = function() {
+    // demo initializer
+    var demo = function() {
 
-            var datatable = $('#kt_datatable').KTDatatable({
-                data: {
-                    saveState: {cookie: false},
-                },
-                search: {
-                    input: $('#kt_datatable_search_query'),
-                    key: 'generalSearch'
-                },
-                columns: [
-                    {
-                        field: 'File',
-                        type: 'text',
-                    },{
-                        field: 'Folder',
-                        type: 'text',
-                    }
-                ],
-            });
-
-
-
-            $('#kt_datatable_search_status').on('change', function() {
-                datatable.search($(this).val().toLowerCase(), 'Status');
-            });
-
-            $('#kt_datatable_search_type').on('change', function() {
-                datatable.search($(this).val().toLowerCase(), 'Type');
-            });
-
-            $('#kt_datatable_search_status, #kt_datatable_search_type').selectpicker();
-
-        };
-
-        return {
-            // Public functions
-            init: function() {
-                // init dmeo
-                demo();
+        var datatable = $('#kt_datatable').KTDatatable({
+            data: {
+                saveState: {cookie: false},
             },
-        };
-    }();
+            search: {
+                input: $('#kt_datatable_search_query'),
+                key: 'generalSearch'
+            },
+            columns: [
+                {
+                    field: 'File',
+                    type: 'text',
+                },{
+                    field: 'Folder',
+                    type: 'text',
+                }
+            ],
+        });
 
-    jQuery(document).ready(function() {
-        KTDatatableHtmlTableDemo.init();
-    });
+
+
+        $('#kt_datatable_search_status').on('change', function() {
+            datatable.search($(this).val().toLowerCase(), 'Status');
+        });
+
+        $('#kt_datatable_search_type').on('change', function() {
+            datatable.search($(this).val().toLowerCase(), 'Type');
+        });
+
+        $('#kt_datatable_search_status, #kt_datatable_search_type').selectpicker();
+
+    };
+
+    return {
+        // Public functions
+        init: function() {
+            // init dmeo
+            demo();
+        },
+    };
+}();
+
+jQuery(document).ready(function() {
+    KTDatatableHtmlTableDemo.init();
+});
 
 </script>
+
+@endsection
