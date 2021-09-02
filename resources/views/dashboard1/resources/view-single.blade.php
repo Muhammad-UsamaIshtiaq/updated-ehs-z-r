@@ -54,7 +54,7 @@
 @section('dashboard')
     <style>
         html,body{
-            overflow:hidden;
+            overflow-x:hidden;
         }
         #sig-canvas {
             border: 2px dotted #CCCCCC;
@@ -346,18 +346,15 @@
             var lastPos = mousePos;
 
             canvas.addEventListener("mousedown", function(e) {
-                e.preventDefault();
                 drawing = true;
                 lastPos = getMousePos(canvas, e);
             }, false);
 
             canvas.addEventListener("mouseup", function(e) {
-                e.preventDefault();
                 drawing = false;
             }, false);
 
             canvas.addEventListener("mousemove", function(e) {
-                e.preventDefault();
                 mousePos = getMousePos(canvas, e);
             }, false);
 
