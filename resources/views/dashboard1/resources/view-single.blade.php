@@ -103,20 +103,12 @@
     @endif
 
 
-
-
-
-<br>
-<br>
-<br>
-<br>
-
     <!--begin::Entry-->
-    <div class="d-flex flex-column-fluid">
+    <div class="d-flex flex-column-fluid mt-5">
         <!--begin::Container-->
         <div class="container">
             <!--begin::Card-->
-            <div class="card card-custom">
+            <div class="card card-custom p-md-10 p-6">
                 @if($sign)
                 @if($sign->sign != null)
 
@@ -133,7 +125,7 @@
                 @else
                     <div id="notdone">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 mb-5">
                         <h2>E-Signature</h2>
                     </div>
                 </div>
@@ -144,7 +136,7 @@
                         </canvas>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-5 mb-10">
                     <div class="col-md-12">
                         <button class="btn btn-primary" id="sig-submitBtn">Submit Signature</button>
                         <button class="btn btn-default" id="sig-clearBtn">Clear Signature</button>
@@ -168,7 +160,7 @@
                         <div id="form_data">
                         {!! $data->data  !!}
                         </div>
-                        <div class="form-submission" style="text-align: center;" >
+                        <div class="form-submission mt-10" style="text-align: right;" >
                         <input type="hidden" id="form_data_form" name="form_data_form">
                             <button class="btn btn-primary">Submit Form</button>
                         </div>
@@ -589,8 +581,18 @@ var KTDatatableHtmlTableDemo = function() {
         },
     };
 }();
-
+function resizeCanvasView() {
+    if($(window).width() <= 575){
+        $('#sig-canvas').attr('width',270)
+    }else{
+        $('#sig-canvas').attr('width',620)
+    }
+}
+$(window).bind( "load resize", function() {
+    resizeCanvasView()
+})
 jQuery(document).ready(function() {
+    resizeCanvasView()
     KTDatatableHtmlTableDemo.init();
 });
 

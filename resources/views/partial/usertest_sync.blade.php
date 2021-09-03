@@ -4,8 +4,6 @@
     $counterr=0;
     $video_completed=0;
     $form_completed=0;
-
-
 @endphp
 @if($type == 'video')
 @foreach($data as $v)
@@ -18,10 +16,15 @@
             $api_key = "AIzaSyAPQKBhoyH0cgY_kCOA_91uqOKpjCFz6A4";
         $video_id =$v->file;
         $url = "https://www.googleapis.com/youtube/v3/videos?id=$video_id&key=$api_key&part=snippet,contentDetails,statistics,status";
-
-        $json = file_get_contents($url);
-        $getData = json_decode( $json , true);
-
+        $ch = curl_init();
+        curl_setopt( $ch, CURLOPT_AUTOREFERER, TRUE );
+        curl_setopt( $ch, CURLOPT_HEADER, 0 );
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt( $ch, CURLOPT_URL, $url );
+        curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, TRUE );
+        $data = curl_exec( $ch );
+        curl_close( $ch );
+        $getData = json_decode($data , true);
         if ($getData['items'] != []){
         foreach((array)$getData['items'] as $key => $gDat){
             $timee = $gDat['contentDetails']['duration'];
@@ -34,10 +37,9 @@
         }
 
         @endphp
-
         <input class="vtime" type="hidden"  value="{{($time-($resumetime))}}">
         <input class="vid" type="hidden" value="{{$v->file}}">
-       <div style="overflow: auto !important;">
+       <div style="overflow: auto !important;text-align:center;background: #1e1e2d;">
            <div id="player" ></div>
        </div>
 
@@ -45,25 +47,31 @@
         <div id="countdown"></div>
 
 
-
-        <button class="btn btn-success" type="button" onclick="pplay()">play</button>
-        <button class="btn btn-warning" type="button" onclick="ppause()">pause</button>
-        <button class="btn btn-info" type="button" onclick="sstop()">Reset</button>
-        <button class="btn btn-danger" type="button" onclick="mmute()">Mute</button>
-        <button class="btn btn-primary" type="button" onclick="unmute()">Unmute</button>
-        <button class="btn btn-primary" type="button" onclick="toglefullscreen()">Full Screen</button>
-        <input  type="range" min="1" max="100" value="30" id="myRange" >
-        <p>Volumne: <span id="demo"></span></p>
-
-        <div class="timer">
-            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">10</span>
+        <div class="video-control-panel d-flex align-items-center">
+            <button class="bg-transparent border-0" type="button" onclick="pplay()"><i class="bi bi-play"></i></button>
+            <button class="bg-transparent border-0" type="button" onclick="ppause()"><i class="bi bi-pause"></i></button>
+            <button class="bg-transparent border-0" type="button" onclick="sstop()"><i class="bi bi-arrow-counterclockwise"></i></button>
+            <button class="bg-transparent border-0" type="button" onclick="mmute()"><i class="bi bi-volume-mute"></i></button>
+            <button class="bg-transparent border-0" type="button" onclick="unmute()"><i class="bi bi-volume-up"></i></button>
+            <div class="ml-auto d-flex align-items-center">
+                <div class="timer d-sm-block d-none" style="color:#B5B5C3;">
+                    <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">10</span>
+                </div>
+                <div class="range-input d-sm-flex d-none custom__range__field  align-items-center">
+                    <input type="range" min="0" max="100" step="1" value="30" id="myRange" class="mx-3" >
+                </div>
+                <div class="mr-3 d-sm-block d-none">
+                  <span id="demo" class="d-block text-center" style="color:#B5B5C3;width:19px;"></span>
+                </div>
+                <button class="bg-transparent border-0" type="button" onclick="toglefullscreen()"><i class="bi bi-fullscreen"></i></button>
+            </div>    
         </div>
         @if($video_completed == 1)
             <button type="button" class="btn btn-info video_next" id="countdown" >Next</button>
 
         @else
 
-            <button type="button" class="btn btn-info next" data-type="video">Next Video</button>
+            <button type="button" class="btn btn-info next mt-5" data-type="video">Next Video</button>
 
         @endif
 
@@ -113,7 +121,30 @@
 
             @endif
     @endif
-
+<style>
+     .video-control-panel{
+        background: #1e1e2d;
+        padding:0px 15px; 
+        border-top:1px solid #3e3e3e; 
+    }
+    .video-control-panel button>i{
+        font-size:30px;
+    }
+    .bi-fullscreen,.bi-arrow-counterclockwise{
+        font-size:25px !important;
+    }
+    iframe{
+        max-width:100%;
+        height:300px;
+    }
+    .custom__range__field input{
+        -webkit-appearance: none;
+        width: 100px;
+        height: 2px;
+        background-color: #4471ef;
+        outline: none;
+    }
+</style>
 @if($type == 'video')
 <script>
     // 2. This code loads the IFrame Player API code asynchronously.

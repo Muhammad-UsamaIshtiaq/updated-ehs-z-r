@@ -47,6 +47,22 @@ class VideoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    function file_get_contents_curl( $url ) {
+
+        $ch = curl_init();
+      
+        curl_setopt( $ch, CURLOPT_AUTOREFERER, TRUE );
+        curl_setopt( $ch, CURLOPT_HEADER, 0 );
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt( $ch, CURLOPT_URL, $url );
+        curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, TRUE );
+      
+        $data = curl_exec( $ch );
+        curl_close( $ch );
+      
+        return $data;
+      
+    }
     public function store(Request $request)
     {
 
@@ -62,7 +78,8 @@ class VideoController extends Controller
         $api_key = "AIzaSyAPQKBhoyH0cgY_kCOA_91uqOKpjCFz6A4";
 
         $vinfo = "https://www.googleapis.com/youtube/v3/videos?id=$video_id&key=$api_key&part=snippet,contentDetails,statistics,status";
-        $json = file_get_contents($vinfo);
+        $json = $this->file_get_contents_curl($vinfo);
+        // file_get_contents($vinfo);
         $getData = json_decode( $json , true);
 
         if ($getData['items'] == []){

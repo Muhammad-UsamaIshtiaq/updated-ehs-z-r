@@ -91,12 +91,12 @@
 
             @if(count($videos) > 0 OR count($ack_form) > 0)
             <div class="row">
-            <div class=" col-10 mx-auto d-block">
+            <div class=" col-md-10 col-12 mx-auto d-block mb-7">
 
                 @if(count($videos) > 0)
                     <div class="card" >
 
-                        <div class="card-body" id="video_v">
+                        <div class="card-body  p-5 p-lg-8" id="video_v">
 
                         </div>
 
