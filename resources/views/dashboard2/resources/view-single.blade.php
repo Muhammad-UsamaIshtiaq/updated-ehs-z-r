@@ -67,6 +67,22 @@
         <div class="container">
             <!--begin::Card-->
             <div class="card card-custom">
+            @if(isset($type))
+            <div class=" card-custom gutter-b mt-3">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-3">
+                        <button class="btn btn-info assign-to-department" data-toggle="modal" data-target="#toemploye">Employee</button>
+                    </div>
+                     <div class="col-3">
+                        <button class="btn btn-info assign-to-department" data-toggle="modal" data-target="#tomanager">Manager</button>
+                    </div>               
+                    <div class="col-3">
+                        <button class="btn btn-info set_file" data-toolbox_id="16" data-toggle="modal" data-target="#toemail">Send Mail</button>
+                    </div>                 
+                </div>
+            </div>
+            @endif
             @if(!isset($type))
             <input  type="hidden" id="file_id" value="{{$file->id}}" />
                 @php $folder='forms'; @endphp
@@ -80,7 +96,7 @@
                 @endif
                 
                 @else
-                <iframe src="{{asset($signature->form_submitted)}}" width="auto" height="1100px" />
+                <iframe src="{{asset($signature->form_submitted)}}" width="auto" height="500px" />
               @endif  
             </div>
             <!--end::Card-->
