@@ -147,6 +147,9 @@ Route::group(['prefix' => 'manager','as' => 'manager.','middleware' => ['auth','
 
         //endadmin
 Route::group(['middleware' => ['auth']],function() {
+    Route::POST('submit_form', [FormBuilder::class, 'submit_form']);
+    Route::GET('view_pdf/{id}',[FormBuilder::class, 'view_pdf']);
+    Route::POST('send_form', [FormBuilder::class, 'send_form']);
     Route::resource('department', Departments::class);
     Route::post('/savepass', [App\Http\Controllers\HomeController::class, 'savepass'])->name('savepass');
     Route::post('/savedata', [App\Http\Controllers\HomeController::class, 'savedata'])->name('savedata');
@@ -309,6 +312,4 @@ Route::get('/rr', function () {
 //    $permission = Permission::create(['name' => 'assign equipment']);
 });
 
-Route::POST('submit_form', [FormBuilder::class, 'submit_form']);
-Route::GET('view_pdf/{id}',[FormBuilder::class, 'view_pdf']);
 

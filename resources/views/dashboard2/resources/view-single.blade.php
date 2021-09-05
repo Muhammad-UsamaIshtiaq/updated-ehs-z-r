@@ -21,6 +21,9 @@
 @endsection
 
 @section('subheader')
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
         <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -60,7 +63,176 @@
     <!--end::Subheader-->
 @endsection
 @section('dashboard')
+    @if(isset($type))
+    <div class=" card-custom gutter-b mt-3">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <button class="btn btn-info assign-to-department" data-toggle="modal" data-target="#toemploye">Employee</button>
+            </div>
+            @if (Auth::user()->hasRole('Admin'))
+                <div class="col-3">
+                <button class="btn btn-info assign-to-department" data-toggle="modal" data-target="#tomanager">Manager</button>
+            </div>   
+            @endif            
+            <div class="col-3">
+                <button class="btn btn-info set_file" data-toolbox_id="16" data-toggle="modal" data-target="#toemail">Send Mail</button>
+            </div>                 
+        </div>
+    </div>
+            <!-- manager modal start -->
+        <div class="modal fade w-100" id="tomanager" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: #4a4e6b;">
+                    <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">To Manager</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i aria-hidden="true" class="ki ki-close text-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form" action="{{url('send_form')}}" method="post">
+                                <div class="card-body">
+                                <input type="hidden" name="form_id" value="{{$signature->id}}">
+                                    @csrf
+                                    <div class="col-12">
+                                        <label for="companyName">Managers</label>
+                                        <div class="input-group">
+                                            <select class="form-control" name='email' >
+                                                <option value="" disabled  readonly>Manager</option>
+                                                @foreach($managers as $manager)
+                                                    <option value="{{$manager->id}}">{{$manager->name}}</option>
+                                                @endforeach
+                                            </select>
 
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-secondary">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+                <!-- manager modal end -->
+
+                <!-- to specific email modal start -->
+    <div class="modal fade w-100" id="toemail" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: #4a4e6b;">
+                    <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">To</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i aria-hidden="true" class="ki ki-close text-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form" action="{{url('send_form')}}" method="post">
+                                <div class="card-body">
+                                <input type="hidden" name="form_id" value="{{$signature->id}}">
+
+                                    @csrf
+                                    <input type="hidden" id="toolbox_id" value="" >
+
+                                    <div class="col-12">
+                                        <label for="companyName">To</label>
+
+
+                                    <input type="email" name='email' class="form-control" id="to_email" required >
+
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-secondary send-mail">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>  
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+            <!-- to specific modal end -->
+
+
+            <!-- to emolyee modal start -->
+
+    <div class="modal fade w-100" id="toemploye" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: #4a4e6b;">
+                    <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">To Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i aria-hidden="true" class="ki ki-close text-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form" action="{{url('send_form')}}" method="post">
+                                <div class="card-body">
+                                    <input type="hidden" name="form_id" value="{{$signature->id}}">
+                                    @csrf
+                                    <div class="col-12">
+                                        <label for="companyName">Employee</label>
+                                        <div class="input-group">
+                                            <select class="form-control" name='email' >
+                                                <option value=""  disabled>Employee</option>
+                                                @foreach($users as $user)
+                                                    <option value="{{$user->email}}">{{$user->name}}</option>
+                                                @endforeach
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-secondary">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+            <!-- to emolyee modal end -->
+
+    @endif
     <!--begin::Entry-->
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->

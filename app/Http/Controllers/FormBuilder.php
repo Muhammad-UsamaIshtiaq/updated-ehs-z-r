@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Spatie\Permission\Models\Role;
 
 //use App\Mail\FormSubmitted;
 
@@ -248,9 +249,35 @@ class FormBuilder extends Controller
 
     public function view_pdf($id)
     {
+        $send_email = true;
+        $users=User::role('User')->where('company_id',Auth::user()->company_id)->get();
+        $roles=Role::where('name','!=','Admin')->where('name','!=','User')->select('name')->get();
+        $role=array();
+        foreach ($roles as $rolee){
+            $role[]=$rolee->name;
+        }
+        $managers=User::role($role)->where('company_id',Auth::user()->company_id)->get();
         $signature = Signature::where(['id'=>$id])->first();
         $type = 'form';
-        return view('dashboard2.resources.view-single',compact('signature','type'));
+        return view('dashboard2.resources.view-single',compact('signature','type', 'send_email','managers','users'));
+    }
+
+
+    public function send_form(Request $request)
+    {
+        $signature = Signature::where(['id'=> $request->form_id])->first();
+        $data['email'] = $request->email;
+        $data['subject'] = 'Submitted Form';
+        // $data['body'] = 'body';
+        $file = $signature->form_submitted;
+        Mail::send('mails.forms', $data, function($message)use($data, $file) {
+            $message->to($data["email"], $data["email"])
+                    ->subject($data["subject"]);
+                $message->attach($file);
+        });
+
+        Session::flash('succesmsg','submitted Successfully');
+        return redirect()->back();
     }
 
 
