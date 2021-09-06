@@ -54,32 +54,34 @@ function departments_byid($id){
 }
 function count_course_assignments($id){
 
+    $data = \App\Models\AssignmentDetail::where('course_id',$id)->where('lang','eng')->count();
+    return $data;
+    // $data=\App\Models\Assignment::where('course_id',$id)->where('lng','eng')->count();
+    // $data1=\App\Models\AcknowledgmentForms::where('course_id',$id)->where('lng','eng')->count();
+    // $data2=\App\Models\Question::where('course_id',$id)->where('lng','eng')->count();
 
-    $data=\App\Models\Assignment::where('course_id',$id)->where('lng','eng')->count();
-    $data1=\App\Models\AcknowledgmentForms::where('course_id',$id)->where('lng','eng')->count();
-    $data2=\App\Models\Question::where('course_id',$id)->where('lng','eng')->count();
-
-    if ($data || $data1 || $data2) {
-        return $data+$data1+$data2;
-    }
-    else{
-        return $data=0;
-    }
+    // if ($data || $data1 || $data2) {
+    //     return $data+$data1+$data2;
+    // }
+    // else{
+    //     return $data=0;
+    // }
 }
 
 function count_esp_course_assignments($id){
 
+    $data = \App\Models\AssignmentDetail::where('course_id',$id)->where('lang','esp')->count();
+    return $data;
+    // $data=\App\Models\Assignment::where('course_id',$id)->where('lng','esp')->count();
+    // $data1=\App\Models\AcknowledgmentForms::where('course_id',$id)->where('lng','esp')->count();
+    // $data2=\App\Models\Question::where('course_id',$id)->where('lng','esp')->count();
 
-    $data=\App\Models\Assignment::where('course_id',$id)->where('lng','esp')->count();
-    $data1=\App\Models\AcknowledgmentForms::where('course_id',$id)->where('lng','esp')->count();
-    $data2=\App\Models\Question::where('course_id',$id)->where('lng','esp')->count();
-
-    if ($data || $data1 || $data2) {
-        return $data+$data1+$data2;
-    }
-    else{
-        return $data=0;
-    }
+    // if ($data || $data1 || $data2) {
+    //     return $data+$data1+$data2;
+    // }
+    // else{
+    //     return $data=0;
+    // }
 }
 
 function count_course_type($id){

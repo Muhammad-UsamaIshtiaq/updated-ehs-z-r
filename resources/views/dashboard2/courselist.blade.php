@@ -431,10 +431,16 @@
                         <tbody>
 
                         @foreach($companies as $companie)
+                        <?php
+                            if(!empty($companie->cat_id))
+                            {
+                                $category = course_cat_byid($companie->cat_id);
+                            }
+                        ?>
                             <tr>
                                 {{--<td>{{$companie->id}}</td>--}}
                                 <td>{{$companie->name}}</td>
-                                <td>{{$companie->cat_id ? course_cat_byid($companie->cat_id)->name:''}}</td>
+                                <td>{{!empty($category) ? $category->name : ''}}</td>
                                 <td>{{$companie->department_id ? departments_byid($companie->department_id)->name:''}}</td>
                                 <td>{{count_course_type($companie->id)}}</td>
 

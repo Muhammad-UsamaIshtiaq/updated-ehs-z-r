@@ -28,6 +28,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\NewUserNotification;
 use App\Listeners\SendNewUserNotification;
+// use App\AssignmentDetail;
+use App\Models\AssignmentDetail;
 
 class AssignmentController extends Controller
 {
@@ -66,6 +68,14 @@ class AssignmentController extends Controller
 //            $as->company_id=Auth::user()->company_id;
              $as->file= $video->video_file;
              $as->save();
+            
+            $assignment_details = [
+                    'course_id' => $request->course_id,
+                    'assignment_id' => $as->id,
+                    'type' => 'video',
+                    'lang' => $request->language
+            ];
+            AssignmentDetail::create($assignment_details);
 
              return redirect('admin/course-assignment/'.$request->course_id.'/'.$request->language);
     }
@@ -112,6 +122,14 @@ class AssignmentController extends Controller
         $add->form_id=$add_form->id;
         $add->lng= $request->language;
         $add->save();
+
+        $assignment_details = [
+            'course_id' => $request->id,
+            'assignment_id' => $add->id,
+            'type' => 'Acknowledgement',
+            'lang' => $request->language
+        ];
+        AssignmentDetail::create($assignment_details);
 
         return redirect('admin/course-assignment/'.$request->id.'/'.$request->language);
     }

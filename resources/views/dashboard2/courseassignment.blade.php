@@ -99,31 +99,31 @@
                             <form class="form" action="{{route('course.create')}}">
                                 <div class="card-body">
                                     <div class="row">
-                                       <div class="col-md-4" >
+                                       <div class="col-md-3" >
                                         <a href="{{url('admin/video-assignment')}}/{{$id}}/{{$language}}"> <div class="mx-3" style="background: #4a4e6b; padding:20px; border-radius:10px;">
                                         <h3 class="text-center text-white"><i class="fa fa-video"></i></h3>
                                             <p class="text-center text-light">Videos</p>
                                         </div>
                                     </a>
                                     </div>
-{{--                                    <div class="col-md-4 my-2" >--}}
-{{--                                        <a href="{{url('admin/audio-assignment')}}/{{$id}}">  <div class="mx-3" style="background: #4a4e6b; padding:20px; border-radius:10px;">--}}
-{{--                                        <h3 class="text-center text-white"><i class="fa fa-file"></i></h3>--}}
-{{--                                        <p class="text-center text-light">Audio</p>--}}
-{{--                                        </div>--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-                                        <div class="col-md-4 my-2" >
+                                        <div class="col-md-3 my-2" >
                                         <a href="{{url('admin/file-assignment')}}/{{$id}}/{{$language}}">  <div class="mx-3" style="background: #4a4e6b; padding:20px; border-radius:10px;">
                                         <h3 class="text-center text-white"><i class="fa fa-file"></i></h3>
                                         <p class="text-center text-light">Acknowledgement</p>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-md-4 my-2" >
-                                  <a href="{{url('questions')}}/{{$id}}/{{$language}}"> <div class="mx-3" style="background: #4a4e6b; padding:20px; border-radius:10px;">
+                                <div class="col-md-3 my-2" >
+                                  <a href="#" data-toggle="modal" data-target="#addworker"> <div class="mx-3" style="background: #4a4e6b; padding:20px; border-radius:10px;">
                                     <h3 class="text-center text-white"><i class="fa fa-question-circle"></i></h3>
-                                    <p class="text-center text-light">Questions/True False</p>
+                                    <p class="text-center text-light">Questions</p>
+                                   </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 my-2" >
+                                  <a href="#" data-toggle="modal" data-target="#addtruefalse"> <div class="mx-3" style="background: #4a4e6b; padding:20px; border-radius:10px;">
+                                    <h3 class="text-center text-white"><i class="fa fa-question-circle"></i></h3>
+                                    <p class="text-center text-light">True/False</p>
                                    </div>
                                 </a>
                             </div>
@@ -280,7 +280,7 @@
                 </div>
                 <div class="card-body">
                     <!--begin: Search Form-->
-                    <h2>Videos</h2>
+                    <!-- <h2>Videos</h2> -->
                     <!--begin::Search Form-->
                     <div class="mb-7">
                         <div class="row align-items-center">
@@ -294,7 +294,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 my-2 my-md-0">
+                                    <!-- <div class="col-md-4 my-2 my-md-0">
                                         <div class="d-flex align-items-center">
                                             <label class="mr-3 mb-0 d-none d-md-block">Status:</label>
                                             <select class="form-control" id="kt_datatable_search_status">
@@ -304,7 +304,7 @@
 
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -320,37 +320,85 @@
                     <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                         <thead>
                         <tr>
-                            {{--<th title="Field #1">ID</th>--}}
                             <th title="Field #2">Title</th>
-                            <th title="Field #3">Description</th>
+                            <!-- <th title="Field #3">Description</th> -->
                             <th title="Field #3">Type</th>
-                            <th title="Field #4">Status</th>
+                            <!-- <th title="Field #4">Status</th> -->
                             <th title="Field #5">Created On</th>
                             <th title="Field #6">Edit</th>
                             <th title="Field #7">Delete</th>
 
-                            {{--<th title="Field #8">Type</th>--}}
-
                         </tr>
-                        @foreach ($data as $data)
+                        @foreach ($assignment_details as $data)
 
-
+                        @if($data->type == 'video')
+                        @if(!empty($data->video))
                         <tr>
-                            <td>{{$data->title}}</td>
-                            <td>{{$data->description}}</td>
-                            <td>{{$data->type}}</td>
-                            <td>{{$data->status}}</td>
-                            <td>{{$data->created_at}}</td>
-                            <td><a class="btn btn-primary font-weight-bolder " onclick="editcomp({{$data->id}})" data-id="{{$data->id}}" data-toggle="modal" data-target="#editCompany"><i class="fa fa-edit"></i></a></td>
+                            <td>{{$data->video->title}}</td>
+                            <!-- <td>{{$data->video->description}}</td> -->
+                            <td>{{$data->video->type}}</td>
+                            <!-- <td>{{$data->video->status}}</td> -->
+                            <td>{{$data->video->created_at}}</td>
+                            <td><a class="btn btn-primary font-weight-bolder " onclick="editcomp({{$data->video->id}})" data-id="{{$data->video->id}}" data-toggle="modal" data-target="#editCompany"><i class="fa fa-edit"></i></a></td>
 
                             <td>
                                 <form action="{{url('admin/destroy-assignment')}}" method="post">
                                     @csrf
-                                    <input type="hidden" name="a_id" value="{{$data->id}}">
+                                    <input type="hidden" name="a_id" value="{{$data->video->id}}">
                                     <button type="submit"><i class="fa fa-trash"></i></button>
                                 </form>
                             </td>
                         </tr>
+                        @endif
+                        @endif
+
+                        @if($data->type == 'Acknowledgement')
+                        @if(!empty($data->acknowledgement))
+                        <tr>
+                            <td>{{$data->acknowledgement->name}}</td>
+                            <td>Acknowledgment</td>
+                            <td >{{$data->acknowledgement->created_at}}</td>
+                            <td ><a class="btn btn-primary font-weight-bolder " href="{{url('admin/ack-form/edit/'.$data->acknowledgement->form_id.'/'.$data->acknowledgement->course_id)}}"><i class="fa fa-edit"></i></a></td>
+                            <td><form action="{{ route('admin.form.ack-destroy',$data->acknowledgement->form_id)}}" method="post">
+                                    @csrf
+                                    <button type="submit"><i class="fa fa-trash"></i></button>
+                                </form></td>
+                        </tr>
+                        @endif
+                        @endif
+
+                        @if($data->type=='Question')
+                        @if(!empty($data->question))
+                        <tr>
+                            <td>{{$data->question->question}}</td>
+                            <td>Question</td>
+                            <td >{{$data->question->created_at}}</td>
+                            <td><a class="btn btn-primary font-weight-bolder " onclick="editquestion({{$data->question->id}})"  data-toggle="modal" data-target="#editpersonnel"><i class="fa fa-edit"></i></a></td>
+                            <td><form action="{{ route('question.destroy',$data->question->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"><i class="fa fa-trash"></i></button>
+                                </form></td>
+                        </tr>
+                        @endif
+                        @endif
+
+                        @if($data->type=='True/False')
+                        @if(!empty($data->question))
+                        <tr>
+                            <td>{{$data->question->question}}</td>
+                            <td>True/False</td>
+                            <td >{{$data->question->created_at}}</td>
+                            <td><a class="btn btn-primary font-weight-bolder " onclick="edit_true_false({{$data->question->id}})"  data-toggle="modal" data-target="#edit_t_f"><i class="fa fa-edit"></i></a></td>
+
+                            <td><form action="{{ route('question.destroy',$data->question->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"><i class="fa fa-trash"></i></button>
+                                </form></td>
+                        </tr>
+                        @endif
+                        @endif
                         @endforeach
                         </thead>
                         <tbody>
@@ -365,83 +413,367 @@
                     <!-- end::modal::adapan-->
                     <!--end: Datatable-->
                 </div>
+            </div>
+           
+        </div>
+       
+    </div>
+    <!--end::Entry-->
 
+      <!--begin::Button--><!-- Modal-->
+      <div class="modal fade w-100" id="editpersonnel" data-backdrop="static"  tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: #4a4e6b;">
+                    <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">Edit Question</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i aria-hidden="true" class="ki ki-close text-white"></i>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="form"   method="post" action="" id="edit-form-answer-question" enctype="multipart/form-data">
+                                @method('PUT')
+                                @csrf
+                                <div class="card-body">
+                                    <div class="form-group row">
 
-                <div class="card-body">
-                    <!--begin: Search Form-->
-                    <!--begin::Search Form-->
-                    <h2>Acknowledgments</h2>
-                    <div class="mb-7">
-                        <div class="row align-items-center">
-                            <div class="col-md-12">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4 my-2 my-md-0">
-                                        <div class="input-icon">
-                                            <input type="text" class="form-control" placeholder="Search..." id="kt_datatable_search_query1" />
-                                            <span>
-                                                <i class="flaticon2-search-1 text-muted"></i>
-                                            </span>
+                                        <input type="hidden" name="course_id" value="{{$id}}"/>
+                                        {{--</div>--}}
+                                        <div class="col-lg-4">
+                                            <label>Question</label>
+                                            <input type="text" class="form-control" placeholder="Write The Question Here" name="question" id="edit-question" required/>
+                                            <span class="form-text text-muted">Please Enter Question</span>
                                         </div>
+                                        <div class="col-lg-4">
+                                            <label>Answer</label>
+                                            <input type="text" class="form-control" placeholder="Write The Answer Here" name="answer" id="edit-answer" required readonly/>
+                                            <span class="form-text text-muted">Please Enter Answer</span>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <img src="{{asset('/assets/media/users/default.jpg')}}" alt="question" id='edit_pic_circlce' onclick="select_img2()" width="150">
+                                            <p>Choose Question Image</p>
+                                            <input type="file" name="photo" id="edit_usr_img" onChange="displayImage2(this)" style="display: none;"  />
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-4">
+                                            <label><input type="radio" name="opt" data-o_id="1" class="eopt"/> Option 1 </label>
+                                            <input type="text" class="form-control" placeholder="Enter Your Email" id="edit-option1" name="option1" />
+                                            <span class="form-text text-muted">Enter Your Option</span>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label><input type="radio" name="opt" data-o_id="2" class="eopt"/> Option 2 </label>
+                                            <input type="text" class="form-control" placeholder="Enter Your Option " id="edit-option2" name="option2" />
+                                            <span class="form-text text-muted">Enter Your Option</span>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label><input type="radio" name="opt" data-o_id="3" class="eopt"/> Option 3 </label>
+                                            <input type="text" class="form-control" placeholder="Enter Your Option " id="edit-option3" name="option3" />
+                                            <span class="form-text text-muted">Enter Your Option</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-4">
+                                            <label><input type="radio" name="opt" data-o_id="4" class="eopt"/> Option 4 </label>
+                                            <input type="text" class="form-control" placeholder="Enter Your Option " id="edit-option4" name="option4" />
+                                            <span class="form-text text-muted">Enter Your Option</span>
+                                        </div>
+
                                     </div>
 
 
+
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-secondary">Save</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+                        <!--end::Model-->
+
+                        <div class="modal fade w-100" id="edit_t_f" data-backdrop="static"  tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background: #4a4e6b;">
+                                        <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">Edit Question</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <i aria-hidden="true" class="ki ki-close text-white"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form"   method="post" action="" id="edit2-form" >
+
+                                                    @csrf
+                                                    <div class="card-body">
+                                                        <div class="form-group row">
+                                                            <input type="hidden" name="course_id" value="{{$id}}"/>
+                                                            <div class="col-lg-8">
+                                                                <label>Question</label>
+                                                                <input type="text" class="form-control" placeholder="Write The Question Here" name="question" id="edit2-question" required/>
+                                                                <span class="form-text text-muted">Please Enter Question</span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="value" value="1" id="true"> True </label>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="value" value="0" id="false" /> False </label>
+
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-secondary">Save</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div></div>
+                                    </div>
+
                                 </div>
                             </div>
-
                         </div>
-                    </div>
-                    <!--end::Search Form-->
-                    <!--end: Search Form-->
-                    <!--begin: Datatable-->
-                    <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable1">
-                        <thead>
-                        <tr>
-                            <th title="Field #1">Sr</th>
-                            <th title="Field #2">Name</th>
-                            <th title="Field #3">Type</th>
-                            <th title="Field #5">Created On</th>
-                            <th title="Field #6">Edit</th>
-                            <th title="Field #7">Delete</th>
+                        <!--end::Model-->
 
-                            <th title="Field #8"></th>
+                          <!-- Modal-->
+                          <div class="modal fade w-100" id="addworker" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background: #4a4e6b;">
+                                        <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">Question summary</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <i aria-hidden="true" class="ki ki-close text-white"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form"   action="{{route('question.store')}}" method="POST" enctype="multipart/form-data"  >
+
+                                                    <div class="card-body">
+                                                        <div class="form-group row">
+                                                            @csrf
+                                                            <input type="hidden" name="course_id" value="{{$id}}"/>
+                                                            <input type="hidden" name="lng" value="{{$language}}"/>
+                                                            <div class="col-lg-4">
+                                                                <label>Question</label>
+                                                                <input type="text" class="form-control" placeholder="Write The Question Here" name="question" id="question" required/>
+                                                                <span class="form-text text-muted">Please Enter Question</span>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <label>Answer</label>
+                                                                <input type="text" class="form-control" placeholder="Write The Answer Here" name="answer" id="answer" required readonly/>
+                                                                <span class="form-text text-muted">Please Enter Answer</span>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <img src="{{asset('/assets/media/users/default.jpg')}}" alt="question" id='pic_circlce' onclick="select_img()" width="150">
+                                                               <p>Choose Question Image</p>
+                                                                <input type="file" name="photo" id="usr_img" onChange="displayImage(this)" style="display: none;"  />
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="opt" data-o_id="1" class="opt"/> Option 1</label>
+                                                                <input type="text" class="form-control" placeholder="Enter Your Email" id="option1" name="option1" />
+                                                                <span class="form-text text-muted">Enter Your Option</span>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="opt" data-o_id="2" class="opt"/> Option 2 </label>
+                                                                <input type="text" class="form-control" placeholder="Enter Your Option " id="option2" name="option2" />
+                                                                <span class="form-text text-muted">Enter Your Option</span>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="opt" data-o_id="3" class="opt"/> Option 3 </label>
+                                                                <input type="text" class="form-control" placeholder="Enter Your Option " id="option3" name="option3" />
+                                                                <span class="form-text text-muted">Enter Your Option</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="opt" data-o_id="4" class="opt"/> Option 4 </label>
+                                                                <input type="text" class="form-control" placeholder="Enter Your Option " id="option4" name="option4" />
+                                                                <span class="form-text text-muted">Enter Your Option</span>
+                                                            </div>
+
+                                                        </div>
 
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @php $counter=1;  @endphp
-                        @foreach($ack_assigments as $form)
-                            <tr>
-                                <td>{{$counter}}</td>
-                                <td>{{$form->name}}</td>
-                                <td>Acknowledgment</td>
-                                <td >{{$form->created_at}}</td>
-                                <td ><a href="{{url('admin/ack-form/edit/'.$form->form_id.'/'.$form->course_id)}}"><i class="fa fa-edit"></i></a></td>
-                                <td><form action="{{ route('admin.form.ack-destroy',$form->form_id)}}" method="post">
-                                        @csrf
-                                        <button type="submit"><i class="fa fa-trash"></i></button>
-                                    </form></td>
-                                <td></td>
-                            </tr>
-                            @php  $counter++; @endphp
-                        @endforeach
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-secondary">Save</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Modal-->
+                         <div class="modal fade w-100" id="addtruefalse" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background: #4a4e6b;">
+                                        <h5 class="modal-title text-uppercase text-white" id="exampleModalLabel">Question summary</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <i aria-hidden="true" class="ki ki-close text-white"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form class="form"   action="{{route('question.true-false')}}" method="post" >
+                                                    @csrf
+                                                    <div class="card-body">
+                                                        <div class="form-group row">
+                                                            <input type="hidden" name="course_id" value="{{$id}}"/>
+                                                            <input type="hidden" name="lng" value="{{$language}}"/>
+                                                            <div class="col-lg-8">
+                                                                <label>Question</label>
+                                                                <input type="text" class="form-control" placeholder="Write The Question Here" name="question"  required/>
+                                                                <span class="form-text text-muted">Please Enter Question</span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="value" value="1" checked="true"> True </label>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <label><input type="radio" name="value" value="0" /> False </label>
+
+                                                            </div>
+                                                        </div>
 
 
-                        </tbody>
-                    </table>
-                    <!--end: Datatable-->
-                </div>
-            </div>
-            <!--end::Card-->
-        </div>
-        <!--end::Container-->
-    </div>
-    <!--end::Entry-->
+
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <button type="reset" class="btn btn-primary mr-2" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-secondary">Save</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Model-->
 @endsection
 @section('js')
 
 
     <script>
+         function editquestion(id){
+
+
+        // alert(id);
+        var host ="{{url('question')}}";
+        var id=parseInt(id);
+        var url=host;
+        var url2=host+'/'+id;
+        var asset ="{{asset('/images/questions')}}/";
+        var asset2 ="{{asset('/assets/media/users/default.jpg')}}";
+
+        $.ajax({
+            type: "GET",
+            url: url + '/' + id + '/edit',
+            data:{id:id},
+            cache: false,
+            success: function(data){
+                // console.log(data);
+                $('#edit-id').val(data.id);
+
+                $('#edit-form-answer-question').attr('action',url2);
+                $('#edit-question').val(data.question);
+                $('#edit-answer').val(data.answer);
+                $('#edit-option1').val(data.option1);
+                $('#edit-option2').val(data.option2);
+                $('#edit-option3').val(data.option3);
+                $('#edit-option4').val(data.option4);
+                if(data.photo != null){
+                    $('#edit_pic_circlce').attr('src',asset+data.photo);
+
+                }else{
+                    $('#edit_pic_circlce').attr('src',asset2);
+                }
+                $('#edit-status').val(data.status);
+
+            }
+        });
+        }
+
+        function edit_true_false(id){
+
+
+            // alert(id);
+            var host ="{{url('question')}}";
+            var id=parseInt(id);
+            var url=host;
+            var url2="{{url('true-false/update/')}}/"+ id;
+
+            $.ajax({
+                type: "GET",
+                url: url + '/' + id + '/edit',
+                data:{id:id,type:'t_f'},
+                cache: false,
+                success: function(data){
+                    // console.log(data);
+                    $('#edit2-id').val(data.id);
+                    $("#edit2-question").val(data.question);
+                    $('#edit2-form').attr('action',url2);
+                    if(data.true_false==1)
+                    {
+                        $("#true").attr('checked','true');
+                    }else{
+                        $("#false").attr('checked','true');
+                    }
+                }
+            });
+            }
 
         function play_video(video_id,type){
 
@@ -664,6 +996,20 @@
         jQuery(document).ready(function() {
             KTDatatableHtmlTableDemo.init();
         });
+
+        function select_img2() {
+            $('#edit_usr_img').click();
+        }
+        function displayImage2(e) {
+            if (e.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e){
+
+                    document.querySelector('#edit_pic_circlce').setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(e.files[0]);
+            }
+        }
 
     </script>
     <!--begin::Page Scripts(used by this page)-->

@@ -16,6 +16,7 @@ use App\Models\worker_course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\AssignmentDetail;
 
 class CourseController extends Controller
 {
@@ -32,6 +33,7 @@ class CourseController extends Controller
         $assigns=worker_course::where('company_id','=',Auth::User()->company_id)->get();
         $departments=department::where('company_id','=',Auth::User()->company_id)->get();
         $workers=Worker::all();
+
         return view('dashboard2.courselist',compact('companies','assigns','departments','courses','workers','course_cat'));
 
     }
@@ -134,12 +136,13 @@ class CourseController extends Controller
 
     public function courseAssignment($id,$language){
         $id = $id;
-        $questions=Question::where('course_id',$id)->where('lng',$language)->get();
+        // $questions=Question::where('course_id',$id)->where('lng',$language)->get();
         $video_cats=video_categorie::where('company_id',Auth::user()->company_id)->get();
-        $ack_assigments=AcknowledgmentForms::where('course_id',$id)->where('lng',$language)->get();
-        $data = Assignment::where('course_id',$id)->where('lng',$language)->get();
-
-        return view('dashboard2.courseassignment',compact('id','data','language','questions','ack_assigments','video_cats'));
+        // $ack_assigments=AcknowledgmentForms::where('course_id',$id)->where('lng',$language)->get();
+        // $data = Assignment::where('course_id',$id)->where('lng',$language)->get();
+        $assignment_details = AssignmentDetail::with('acknowledgement','video','question')->where(['course_id'=> $id, 'lang'=> $language])->get();
+        // return $assignment_details;
+        return view('dashboard2.courseassignment',compact('id','language','video_cats','assignment_details'));
     }
     public function videoassignment($id,$language){
         $video_library_categories=video_categorie::where('company_id','=',Auth::User()->company_id)->get();

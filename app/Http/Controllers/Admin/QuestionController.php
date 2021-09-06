@@ -8,6 +8,7 @@ use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use App\Models\AssignmentDetail;
 
 class QuestionController extends Controller
 {
@@ -50,6 +51,14 @@ class QuestionController extends Controller
         $add->status=1;
 
         $add->save();
+
+        $assignment_details = [
+            'course_id' => $request->course_id,
+            'assignment_id' => $add->id,
+            'type' => 'True/False',
+            'lang' => $request->lng
+        ];
+        AssignmentDetail::create($assignment_details);
 //        return redirect()->route('question.index');
         return redirect('admin/course-assignment/'.$request->course_id.'/'.$request->lng);
     }
@@ -81,6 +90,14 @@ class QuestionController extends Controller
         $add->status=1;
 
         $add->save();
+
+        $assignment_details = [
+            'course_id' => $request->course_id,
+            'assignment_id' => $add->id,
+            'type' => 'Question',
+            'lang' => $request->lng
+        ];
+        AssignmentDetail::create($assignment_details);
 //        return redirect()->route('question.index');
         return redirect('admin/course-assignment/'.$request->course_id.'/'.$request->lng);
     }
