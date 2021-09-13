@@ -260,7 +260,7 @@
                     <div class="card-toolbar">
 
                         <!--begin::Button-->
-                        <a href="#" class="btn btn-primary font-weight-bolder" data-toggle="modal" data-target="#addEquipment"  style="margin-right:10px !important; ">
+                        <a href="#" class="btn btn-primary font-weight-bolder d-sm-inline d-block" data-toggle="modal" data-target="#addEquipment"  style="margin-right:10px !important; ">
 											<span class="svg-icon svg-icon-md">
 												<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -273,7 +273,7 @@
                                                 <!--end::Svg Icon-->
 											</span>New Groups</a>
 
-                            <a href="#" class="btn btn-primary font-weight-bolder" data-toggle="modal" data-target="#assignEquipment">
+                            <a href="#" class="btn btn-primary font-weight-bolder d-sm-inline d-block" data-toggle="modal" data-target="#assignEquipment">
 											<span class="svg-icon svg-icon-md">
 												<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
 												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
