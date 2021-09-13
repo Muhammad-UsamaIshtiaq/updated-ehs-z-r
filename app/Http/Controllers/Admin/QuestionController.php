@@ -187,6 +187,7 @@ class QuestionController extends Controller
     {
         $del=Question::find($id);
         $del->delete();
+        AssignmentDetail::where(['assignment_id'=> $id])->delete();
         return redirect()->back();
     }
     public function delete_course_questions(Request $request)

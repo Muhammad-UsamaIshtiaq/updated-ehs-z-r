@@ -707,6 +707,22 @@
 
 
     <script>
+        $('.eopt').click(function(){
+            var id=$(this).data('o_id');
+
+            var opt=$('#edit-option'+id).val();
+            $('#edit-answer').val(opt);
+
+
+        });
+        $('.opt').click(function(){
+            var id=$(this).data('o_id');
+
+            var opt=$('#option'+id).val();
+            $('#answer').val(opt);
+
+
+        });
          function editquestion(id){
 
 

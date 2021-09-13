@@ -69,7 +69,7 @@
 
 
             @else
-
+                    @if(!empty($is_resume))
                     @if($is_resume->state == 'pause')
 
 
@@ -84,6 +84,7 @@
 
                         <input type="hidden" id="counter"  value="0">
 
+                @endif
                 @endif
 
             @endif
@@ -125,6 +126,7 @@
                     <form class="form" action="{{route('usertests.store')}}" method="post" id="testform">
                         @csrf
                         <input type="hidden" name="course_id" id="course_id"  value="{{$c_id}}">
+                        <input type="hidden" name="assignment_id" value="{{$assignment_details->id}}">
 
                     @foreach($questions as $question)
                 <div class="form-group row" >
@@ -229,16 +231,17 @@
         }
 
         function synctest(type) {
-
             var cid = $('#c_id').val();
+            if($('#counter').val()!=undefined)
             var count = parseInt($('#counter').val());
-
+            else
+            var count = 0;
             var v_token = "{{csrf_token()}}";
             $('#video_v').html('loading...');
             $('#ack-file').html('loading...');
 
             $('#res_type').val(type);
-            if($('#resumetype').val() != ''){
+            if($('#resumetype').val() != ''  && $('#resumetype').val()!=undefined){
                 var type=$('#resumetype').val();
             }
             var resumetime = $('#resumetime').val();
@@ -246,7 +249,7 @@
             $.ajax({
                 type: 'POST',
                 url: "{{url('usertests-sync')}}",
-                data: {type: type,resumetime:resumetime,count: count, _token: v_token,cid:cid},
+                data: {type: type,resumetime:resumetime,count: count, _token: v_token,cid:cid, _token: "{{ csrf_token() }}"},
 
                 cache: false,
                 success: function (data) {

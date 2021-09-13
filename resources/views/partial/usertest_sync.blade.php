@@ -6,15 +6,11 @@
     $form_completed=0;
 @endphp
 @if($type == 'video')
-@foreach($data as $v)
     @if($counterr == $counter )
-        @if(count($data) == ($counter+1))
-            @php $video_completed=1; @endphp
-            @endif
 
         @php
             $api_key = "AIzaSyAPQKBhoyH0cgY_kCOA_91uqOKpjCFz6A4";
-        $video_id =$v->file;
+        $video_id =$data->file;
         $url = "https://www.googleapis.com/youtube/v3/videos?id=$video_id&key=$api_key&part=snippet,contentDetails,statistics,status";
         $ch = curl_init();
         curl_setopt( $ch, CURLOPT_AUTOREFERER, TRUE );
@@ -22,9 +18,9 @@
         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt( $ch, CURLOPT_URL, $url );
         curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, TRUE );
-        $data = curl_exec( $ch );
+        $dat = curl_exec( $ch );
         curl_close( $ch );
-        $getData = json_decode($data , true);
+        $getData = json_decode($dat , true);
         if ($getData['items'] != []){
         foreach((array)$getData['items'] as $key => $gDat){
             $timee = $gDat['contentDetails']['duration'];
@@ -38,7 +34,7 @@
 
         @endphp
         <input class="vtime" type="hidden"  value="{{($time-($resumetime))}}">
-        <input class="vid" type="hidden" value="{{$v->file}}">
+        <input class="vid" type="hidden" value="{{$data->file}}">
        <div style="overflow: auto !important;text-align:center;background: #1e1e2d;">
            <div id="player" ></div>
        </div>
@@ -67,35 +63,25 @@
             </div>    
         </div>
         @if($video_completed == 1)
-            <button type="button" class="btn btn-info video_next" id="countdown" >Next</button>
+        <a href="{{url('next_assignment', $c_id)}}/{{$assignment_details->id}}/{{$assignment_details->type}}"> <button type="button" class="btn btn-info video_next" id="countdown" >Next</button></a>
 
         @else
 
-            <button type="button" class="btn btn-info next mt-5" data-type="video">Next Video</button>
-
+        <a href="{{url('next_assignment', $c_id)}}/{{$assignment_details->id}}/{{$assignment_details->type}}"><button type="button" class="btn btn-info next mt-5" data-type="video">Next Video</button></a>
         @endif
 
 
 
     @endif
     @php $counterr++; @endphp
-@endforeach
     @endif
 @if($type == 'ack_form')
 
-    @foreach($data1 as $v2)
-        @if($counterr == $counter )
-            @if(count($data1) == ($counter+1))
-                @php $form_completed=1;
+   
 
-                @endphp
-            @endif
-
-        @php $file=\App\Models\Form::find($v2->form_id); @endphp
+        @php $file=\App\Models\Form::find($data1->form_id); @endphp
         <iframe src="{{asset('/images/assignments/acknowledgment')}}/{{$file->file_name}}" width="600px" height="2100px" />
-       @endif
-       @php $counterr++; @endphp
-        @endforeach
+       
 
 
         <center>
@@ -112,14 +98,9 @@
             </div>
         </center>
 
-            @if($form_completed == 1)
-                <button type="button" class="btn btn-info file_next"  >Next</button>
+                <a href="{{url('next_assignment', $c_id)}}/{{$assignment_details->id}}/{{$assignment_details->type}}"><button type="button" class="btn btn-info file_next"  >Next</button></a>
 
-            @else
-
-                <button type="button" class="btn btn-info next " data-type="ack_form">Next File</button>
-
-            @endif
+          
     @endif
 <style>
      .video-control-panel{
@@ -429,23 +410,10 @@
 
         $('.video_next').click(function () {
 
-            @if(count($data1) > 0)
-            $('#counter').val(0);
-            $('#video_v').hide();
-            $('#ack-file').show();
-            $('#question_v').hide();
-            synctest('ack_form');
-            @elseif(count($data2) > 0)
-            $('#video_v').hide();
-            $('#ack-file').hide();
-            $('#question_v').show();
-            @else
-            // alert('test submit');
-            $('#testform').submit();
-            @endif
+          
         });
 
-        $('.file_next').click(function () {
+        $('.file_next1').click(function () {
 
             @if(count($data2) > 0)
             $('#video_v').hide();

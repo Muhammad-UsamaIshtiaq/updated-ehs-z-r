@@ -223,6 +223,7 @@ Route::group(['middleware' => ['auth','role:User|Manager|Fleet Manager|Human Res
     Route::resource('all-personnel', WorkersController::class);
     Route::resource('userpersonnel', \App\Http\Controllers\User\UserController::class);
     Route::resource('usertests', \App\Http\Controllers\User\UserCourseTestsController::class);
+    Route::get('/next_assignment/{course_id}/{old_assignment}/{type}', [\App\Http\Controllers\User\UserCourseTestsController::class,'next_assignment']);
     Route::post('/usertests-resume', [\App\Http\Controllers\User\UserCourseTestsController::class,'usertest_pause']);
     Route::post('/usertests-sync', [\App\Http\Controllers\User\UserCourseTestsController::class,'usertest_sync']);
     Route::resource('equipments', \App\Http\Controllers\EquipmentController::class);

@@ -416,8 +416,10 @@ class AssignmentController extends Controller
     }
     public function ack_destroy(Request $request,$id)
     {
+        $ackn = AcknowledgmentForms::where('form_id',$id)->first();
         $del=Form::find($id)->delete();
         $del2=AcknowledgmentForms::where('form_id',$id)->delete();
+        AssignmentDetail::where(['assignment_id'=> $ackn->id, 'type'=>'Acknowledgement'])->delete();
         Session::flash('succesmsg','Deleted Successfully');
         return redirect()->back();
     }
@@ -426,6 +428,7 @@ class AssignmentController extends Controller
         //
 //        dd($request->all());
         $data = Assignment::find($request->a_id)->delete();
+        AssignmentDetail::where(['assignment_id'=> $request->a_id, 'type'=>'video'])->delete();
         Session::flash('succesmsg','Deleted Successfully');
         return redirect()->back();
     }

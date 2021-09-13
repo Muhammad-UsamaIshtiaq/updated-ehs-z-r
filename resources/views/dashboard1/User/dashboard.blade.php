@@ -117,7 +117,7 @@
                                     $take=\App\Models\CourseResults::where('course_id',$assigncourse->course_id)->where('worker_id',Auth::user()->user_personel->id)->count();
                                     $res=\App\Models\CourseResults::where('course_id',$assigncourse->course_id)->where('worker_id',Auth::user()->user_personel->id)->first();
                                 @endphp
-                                <td>@if($res && $res->grade == 'pass') Passed @else <a  class="btn @if($take > 0)btn-warning @else btn-success @endif " onclick="start_test({{$assigncourse->course_id}})" >@if($take > 0)Resume @else Start @endif</a> @endif</td>
+                                <td>@if($res && $res->grade == 'pass') Passed @else <a  class="btn @if($take > 0)btn-warning @else btn-success @endif "  href="{{url('usertests',$assigncourse->course_id)}}" >@if($take > 0)Resume @else Start @endif</a> @endif</td>
                                 <td></td>
                             </tr>
                             @endif
