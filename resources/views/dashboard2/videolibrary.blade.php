@@ -190,7 +190,15 @@
                                                                 <span class="form-text text-muted">Please Upload Video File</span>
                                                             </div>
                                                             <div class="col-12" >
-                                                                <label for="videoUpload">Youtube(only Video ID)</label>
+                                                                <label for="videoUpload">Select Type:</label>
+                                                                <div class="">
+                                                                    <input class='' type="radio"  checked name="video_type" value="youtube"> <span class="ml-2">Youtube</span>
+                                                                    <input class='' type="radio" class="ml-2"  name="video_type" value="vimeo"> <span class="ml-2">Vimeo</span>
+                                                                </div>
+                                                                <span class="form-text text-muted">Please Upload Video File</span>
+                                                            </div>
+                                                            <div class="col-12" >
+                                                                <label for="videoUpload">only Video ID (Video Or Vimo)</label>
                                                                 <div class="input-group">
                                                                     <input class='form-control' type="text" placeholder="Youtube(only Video ID)"  id="from_ex_ch" name="videolink" required >
                                                                 </div>

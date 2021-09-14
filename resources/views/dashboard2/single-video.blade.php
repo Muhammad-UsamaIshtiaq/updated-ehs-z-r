@@ -90,6 +90,19 @@
                     ></iframe>
 
                     @endif
+                    @if($video->type='vimeo')
+                    <iframe
+                        src="https://player.vimeo.com/video/{{$video->video_file}}?enablejsapi=1&amp;start=00&amp;disablekb=1&amp;autoplay=1&amp;rel=0"
+                        allow="accelerometer;
+                        autoplay;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture"
+                        allowfullscreen=""
+
+                        frameborder="0"
+                    ></iframe>
+                    @endif
                     @if($video->type == 'pc')
                     <video src="{{ URL::to('/') }}/images/videos/{{$video->video_file}}"   controls class="img-fluid" style="width:100%; height:100%;">
                     </video>

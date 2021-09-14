@@ -66,7 +66,6 @@ class VideoController extends Controller
     public function store(Request $request)
     {
 
-
         if (empty($request->videofile) AND empty($request->videolink)){
             Session::flash('errormsg','choose video/link');
             return redirect()->back();
@@ -74,18 +73,36 @@ class VideoController extends Controller
 
 
         $video_id = $request->videolink;
+        if($request->video_type=="youtube")
+        {
+            $api_key = "AIzaSyAPQKBhoyH0cgY_kCOA_91uqOKpjCFz6A4";
 
-        $api_key = "AIzaSyAPQKBhoyH0cgY_kCOA_91uqOKpjCFz6A4";
+            $vinfo = "https://www.googleapis.com/youtube/v3/videos?id=$video_id&key=$api_key&part=snippet,contentDetails,statistics,status";
+            $json = $this->file_get_contents_curl($vinfo);
+            // file_get_contents($vinfo);
+            $getData = json_decode( $json , true);
 
-        $vinfo = "https://www.googleapis.com/youtube/v3/videos?id=$video_id&key=$api_key&part=snippet,contentDetails,statistics,status";
-        $json = $this->file_get_contents_curl($vinfo);
-        // file_get_contents($vinfo);
-        $getData = json_decode( $json , true);
-
-        if ($getData['items'] == []){
-            Session::flash('warnmsg','Your Youtube Video ID Is Incorrect');
-            return redirect()->back();
+            if ($getData['items'] == []){
+                Session::flash('warnmsg','Your Youtube Video ID Is Incorrect');
+                return redirect()->back();
+                }
+        }  
+        
+        if($request->video_type=="vimeo")
+        {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, "http://vimeo.com/api/v2/video/".$video_id.".php");
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+            $output = curl_exec($ch);
+            // $output = $output[0];
+            curl_close($ch);
+            if (strpos($output, 'not') !== false) {
+                Session::flash('warnmsg','Your Vimeo Video ID Is Incorrect');
+                return redirect()->back();
             }
+        }
 //        if(empty($url)) {
 //
 //            if ($request->has('videofile')) {
@@ -125,7 +142,7 @@ class VideoController extends Controller
        $storeFile->course_id = $request->course_id;
        $storeFile->video_cat_it = $request->v_cat_id;
        $storeFile->department_id = $request->department_id;
-       $storeFile->type = 'youtube';
+       $storeFile->type = $request->video_type;
        $storeFile->video_file = $video_id;
        $storeFile->video_thumbnail = $video_thumbnail;
        $storeFile->language = $request->language;

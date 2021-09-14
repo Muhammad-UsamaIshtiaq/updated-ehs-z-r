@@ -6,6 +6,9 @@
     $form_completed=0;
 @endphp
 @if($type == 'video')
+    @php
+        $video_type = DB::table('videos')->where(['video_file'=> $data->file])->first();
+    @endphp    
     @if($counterr == $counter )
 
         @php
@@ -40,7 +43,7 @@
        </div>
 
         <div id="countdown"></div>
-        <div class="plyr__video-embed js-player" data-plyr-provider="youtube" data-plyr-embed-id="{{$data->file}}"></div>
+        <div class="plyr__video-embed js-player" data-plyr-provider="{{$video_type->type}}" data-plyr-embed-id="{{$video_type->video_file}}"></div>
         </div>
         @if($video_completed == 1)
         <a href="{{url('next_assignment', $c_id)}}/{{$assignment_details->id}}/{{$assignment_details->type}}"> <button type="button" class="btn btn-info video_next" id="countdown" >Next</button></a>
