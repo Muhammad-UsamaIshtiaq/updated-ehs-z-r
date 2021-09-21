@@ -12,6 +12,7 @@ use App\Models\course;
 use App\Models\department;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use DB;
 
 class VideoController extends Controller
 {
@@ -193,15 +194,17 @@ class VideoController extends Controller
     }
     public function play_youtube_video(Request $request)
     {
+        $video_type = "";
         if ($request->type == 'from_videos'){
             $video=VideoLibrary::find($request->video_id);
             $file=$video->video_file;
         }else{
             $video=Assignment::find($request->video_id);
             $file=$video->file;
+            $type = DB::table('videos')->where(['video_file'=> $file])->first();
+            $video_type = $type->type;
         }
-
-        $view =view('partial.playyoutube',compact('video','file'));
+        $view =view('partial.playyoutube',compact('video','file', 'video_type'));
 
         return $view;
 

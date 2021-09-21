@@ -53,7 +53,7 @@ Route::get('/', function () { return redirect()->route('login'); })->middleware(
 Route::group(['as' => 'master.','middleware' => ['masterauth']],function () {
 
     Route::resource('master/companies', CompaniesController::class);
-    Route::get('master/login',[\App\Http\Controllers\Master\MasterController::class,'index'])->name('index');
+    // Route::get('master/login',[\App\Http\Controllers\Master\MasterController::class,'index'])->name('index');
     Route::get('master/dashboard',[\App\Http\Controllers\Master\MasterController::class,'dashboard'])->name('dashboard');
     Route::get('master/secret/login/{id}',[\App\Http\Controllers\Master\MasterController::class,'secret_login'])->name('secret.login');
 
