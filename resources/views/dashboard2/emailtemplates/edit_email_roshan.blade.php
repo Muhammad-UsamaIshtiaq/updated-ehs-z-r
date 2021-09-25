@@ -36,7 +36,7 @@
                             <a href="{{url('/')}}" class="text-muted">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{url('/admin/email-templates')}}" class="text-muted">Email Templates</a>
+                            <a href="{{url('/admin/email-templates')}}" class="text-muted">Edit Email Templates</a>
                         </li>
                     </ul>
                     <!--end::Breadcrumb-->
@@ -67,75 +67,100 @@
                     </div>
 
                 </div>
-                <div class="card-body">
-                    <!--begin: Search Form-->
-                    <!--begin::Search Form-->
-                    <div class="mb-7">
-                        <div class="row align-items-center">
-                            <div class="col-md-12">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4 my-2 my-md-0">
-                                        <div class="input-icon">
-                                            <input type="text" class="form-control" placeholder="Search..." id="kt_datatable_search_query" />
-                                            <span>
-																	<i class="flaticon2-search-1 text-muted"></i>
-																</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 my-2 my-md-0">
-                                        <div class="d-flex align-items-center">
-                                            <label class="mr-3 mb-0 d-none d-md-block">Status:</label>
-                                            <select class="form-control" id="kt_datatable_search_status">
-                                                <option value="">All</option>
-                                                <option value="1">Active</option>
-                                                <option value="0">Deactive</option>
+                <form class="form" action="{{url('admin/update-email-template')}}" method="post" >
+                    @csrf
+                    <input type="hidden" name="id"/>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Name:</label>
+                                <input type="text" class="form-control" name="name" value="" placeholder="Enter full name"/>
+                                <span class="form-text text-muted">Please enter emailtype/name</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>From:</label>
+                                <input type="email" class="form-control" name="from_email" value=""placeholder="Enter contact number"/>
+                                <span class="form-text text-muted">Please enter email from/address</span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Subject:</label>
+                                <input type="text" class="form-control" name="subject" value="" placeholder="Enter full name"/>
+                                <span class="form-text text-muted">Please enter email subject</span>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Status:</label>
+                               <select class="form-control"  name="status">
 
-                                            </select>
-                                        </div>
-                                    </div>
-
+                                   <option value="1">Active</option>
+                                   <option value="0">Deactive</option>
+                               </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Image1:</label>
+                                <input class="form-control" name="img1" type="file" />
+                            </div>
+                            <div class="col-lg-6">
+                                <label>Image1 Button Link:</label>
+                                <input class="form-control" name="img1-button" type="text" />
+                            </div>
+                            <div class="col-12 mt-10">
+                                <div>
+                                    <label class="text-right">Image 1 Detail</label>
+                                    <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
                                 </div>
                             </div>
-
+                            <div class="col-lg-6 mt-10">
+                                <label>Image2:</label>
+                                <input class="form-control" name="img2" type="file" />
+                            </div> 
+                            <div class="col-lg-6 mt-10">
+                                <label>Image2 Button Link:</label>
+                                <input class="form-control" name="img2-button" type="text" />
+                            </div>
+                            <div class="col-12 mt-10">
+                                <div>
+                                    <label class="text-right">Image 2 Detail</label>
+                                    <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6">
+                                <label>Image3:</label>
+                                <input class="form-control" name="img3" type="file" />
+                            </div> 
+                            <div class="col-lg-6">
+                                <label>Image3 Button Link:</label>
+                                <input class="form-control" name="img3-button" type="text" />
+                            </div>
+                            <div class="col-12 mt-10">
+                                <div>
+                                    <label class="text-right">Image 3 Detail</label>
+                                    <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                </div>
+                            </div>   
+                            <div class="col-lg-6 mt-10">
+                                <label>Banner Image:</label>
+                                <input class="form-control" name="bannerImg" type="file" />
+                                <div class="mt-10">
+                                    <label class="text-right">Banner Image Text</label>
+                                        <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                    </div>
+                               </div>    
                         </div>
                     </div>
-                    <!--end::Search Form-->
-                    <!--end: Search Form-->
-                    <!--begin: Datatable-->
-                    <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
-                        <thead>
-                        <tr>
-
-                            <th title="Field #2">Sr#</th>
-                            <th title="Field #3">Name</th>
-                            <th title="Field #4">From</th>
-                            <th title="Field #5">Subject</th>
-                            <th title="Field #6">Status</th>
-                            <th title="Field #7">Edit</th>
-
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @php  $counter=1; @endphp
-                        @foreach($data as $datas)
-                            <tr>
-
-                                <td>{{$counter}}</td>
-                                <td>{{$datas->name}}</td>
-                                <td>{{$datas->email_from}}</td>
-                                <td>{{$datas->subject}}</td>
-                                <td >{{$datas ->status}}</td>
-                                <td><a href="{{url('admin/edit-email-templates',$datas->id)}}" class="btn btn-primary font-weight-bolder" ><i class="fa fa-edit"></i></a></td>
-
-                            </tr>
-                            @php  $counter++; @endphp
-                        @endforeach
-
-                        </tbody>
-                    </table>
-                    <!--end: Datatable-->
-                </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-primary mr-2">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
             <!--end::Card-->
         </div>
@@ -144,7 +169,7 @@
     <!--end::Entry-->
 @endsection
 @section('js')
-
+    <script src="{{ asset('assets/js/pages/crud/forms/editors/summernote.js?v=7.2.7')}}"></script>
     <script >
         // "use strict";
         // Class definition
@@ -233,6 +258,28 @@
             KTDatatableHtmlTableDemo.init();
         });
 
+        // Class definition
+
+        var KTSummernoteDemo = function () {
+            // Private functions
+            var demos = function () {
+                $('.summernote').summernote({
+                    height: 150
+                });
+            }
+
+            return {
+                // public functions
+                init: function() {
+                    demos();
+                }
+            };
+        }();
+
+        // Initialization
+        jQuery(document).ready(function() {
+            KTSummernoteDemo.init();
+        });
     </script>
 
 @endsection
