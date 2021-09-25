@@ -18,6 +18,15 @@ public function index(){
 
 
 }
+
+public function email_roshan(){
+
+
+    $data=EmailTemplates::all();
+    return view('dashboard2.emailtemplates.email_roshan');
+
+
+}
 public function edit_email_template($id){
 
 
@@ -25,6 +34,9 @@ public function edit_email_template($id){
     return view('dashboard2.emailtemplates.edit',compact('data'));
 
 
+}
+public function edit_email_roshan(){
+    return view('dashboard2.emailtemplates.edit_email_roshan');
 }
 public function update_email_template(Request $request){
 

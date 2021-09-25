@@ -124,7 +124,9 @@ Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','role
     Route::post('add-q-assignment', [App\Http\Controllers\Admin\AssignmentController::class,'addassignmentq']);
     Route::post('assign-common', [App\Http\Controllers\Admin\AssignmentController::class,'assigncommon']);
     Route::get('email-templates', [App\Http\Controllers\Admin\EmailTemplatesController::class,'index']);
+    Route::get('email-templates-roshan', [App\Http\Controllers\Admin\EmailTemplatesController::class,'email_roshan']);
     Route::get('edit-email-templates/{id}', [App\Http\Controllers\Admin\EmailTemplatesController::class,'edit_email_template']);
+    Route::get('edit-email-roshan', [App\Http\Controllers\Admin\EmailTemplatesController::class,'edit_email_roshan']);
     Route::post('update-email-template', [App\Http\Controllers\Admin\EmailTemplatesController::class,'update_email_template']);
     Route::get('admin/ack-forms', [App\Http\Controllers\FormBuilder::class,'ack_forms'])->name('ack-forms.index');
     Route::get('admin/show-single-ack-form/{id}', [App\Http\Controllers\FormBuilder::class,'ack_form_single'])->name('ack-forms.show-single');
