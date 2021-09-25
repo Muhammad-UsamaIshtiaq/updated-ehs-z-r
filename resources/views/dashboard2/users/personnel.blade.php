@@ -856,6 +856,7 @@
                         <tbody>
 
                         @foreach($workers as $work)
+                        @if(!empty($work->user))
                             <tr>
                                 {{-- <td>{{$companie->id}}</td> --}}
                                 <td><a style="cursor: pointer; color: cadetblue;" onclick="editcomp({{$work->id}})" data-id="{{$work->id}}" data-toggle="modal" data-target="#editpersonnel"><strong>{{$work->first_name}} {{$work->last_name}}</strong></a></td>
@@ -885,6 +886,7 @@
 
 
                             </tr>
+                        @endif    
                         @endforeach
 
 
