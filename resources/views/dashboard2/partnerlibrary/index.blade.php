@@ -39,6 +39,8 @@
                 max-height: 243px;
                 object-fit: cover;
                 margin-bottom:20px;
+                margin-top:20px;
+                border-radius:8px;
             }
         </style>
 
