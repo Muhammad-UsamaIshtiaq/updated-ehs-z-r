@@ -19,7 +19,7 @@
     <!--end::Toolbar-->
 @endsection
 
-@section('subheader')
+@section('subheader'
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
         <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -63,7 +63,7 @@
             <!--begin::Row-->
             <div class="row">
                 <div class="col-md-8">
-                    <img src="{{URL::asset('/images/videolib2.png')}}" style="width:100%; height: 475px !important;" class="img-fluid" />
+                    <img src="{{URL::asset('/images/files.jpeg')}}" style="width:100%; height: 475px !important;" class="img-fluid" />
                     <div class="col-md-12 overlay-text"  style="height: 110px;">
                         <h2 class="text-white gr-heading">MASTER ADMINISTRATION PAGE</h2>
                         <p class="text-white">MANAGE - CREATE - ASSIGN - BUILD - REPORTS - ANALYTICS AND MORE</p>

@@ -35,6 +35,11 @@
                     background: #0e0e0e;
                 }
             }
+            .logo-area-img img{
+                max-height: 243px;
+                object-fit: cover;
+                margin-bottom:20px;
+            }
         </style>
 
 @endsection
@@ -59,6 +64,14 @@
 
 @section('subheader')
     <!--begin::Subheader-->
+    <div class="row mx-0 logo-area-img">
+        <div class="col-md-6">
+            <img class="w-100" src="{{asset('images/grangers.png')}}" alt="Gringers"  />
+        </div>
+        <div class="col-md-6">
+            <img class="w-100" src="{{asset('images/lowers.png')}}" alt="Gringers" />
+        </div>
+    </div>
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader" style="height:80px;">
         <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
             <!--begin::Info-->
