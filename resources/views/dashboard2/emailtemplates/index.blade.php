@@ -126,7 +126,8 @@
                                 <td>{{$datas->email_from}}</td>
                                 <td>{{$datas->subject}}</td>
                                 <td >{{$datas ->status}}</td>
-                                <td><a href="{{url('admin/edit-email-templates',$datas->id)}}" class="btn btn-primary font-weight-bolder" ><i class="fa fa-edit"></i></a></td>
+                                <!--<td><a href="{{url('admin/edit-email-templates',$datas->id)}}" class="btn btn-primary font-weight-bolder" ><i class="fa fa-edit"></i></a></td>-->
+                                <td><a href="{{url('admin/edit-email-roshan',$datas->id)}}" class="btn btn-primary font-weight-bolder" ><i class="fa fa-edit"></i></a></td>
 
                             </tr>
                             @php  $counter++; @endphp

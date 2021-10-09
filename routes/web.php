@@ -70,7 +70,9 @@ Route::post('master/logout',[\App\Http\Controllers\Master\MasterController::clas
 Route::group(['middleware' => ['auth','role:Admin']], function() {
 
 
-    Route::get('/dashboard2',function(){ return view('dashboard2.dashboard'); });
+    Route::get('/dashboard2',function(){
+        return view('dashboard2.dashboard');
+    });
     Route::resource('manager',\App\Http\Controllers\Admin\ManagerController::class);
 
     Route::resource('workercourse', \App\Http\Controllers\Admin\WorkerCoursesController::class);
@@ -126,7 +128,7 @@ Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','role
     Route::get('email-templates', [App\Http\Controllers\Admin\EmailTemplatesController::class,'index']);
     Route::get('email-templates-roshan', [App\Http\Controllers\Admin\EmailTemplatesController::class,'email_roshan']);
     Route::get('edit-email-templates/{id}', [App\Http\Controllers\Admin\EmailTemplatesController::class,'edit_email_template']);
-    Route::get('edit-email-roshan', [App\Http\Controllers\Admin\EmailTemplatesController::class,'edit_email_roshan']);
+    Route::get('edit-email-roshan/{id}', [App\Http\Controllers\Admin\EmailTemplatesController::class,'edit_email_roshan']);
     Route::post('update-email-template', [App\Http\Controllers\Admin\EmailTemplatesController::class,'update_email_template']);
     Route::get('admin/ack-forms', [App\Http\Controllers\FormBuilder::class,'ack_forms'])->name('ack-forms.index');
     Route::get('admin/show-single-ack-form/{id}', [App\Http\Controllers\FormBuilder::class,'ack_form_single'])->name('ack-forms.show-single');

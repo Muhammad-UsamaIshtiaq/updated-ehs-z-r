@@ -67,34 +67,34 @@
                     </div>
 
                 </div>
-                <form class="form" action="{{url('admin/update-email-template')}}" method="post" >
+                <form class="form" action="{{url('admin/update-email-template')}}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" name="id"/>
+                    <input type="hidden" name="id" value="{{$data->id}}"/>
                     <div class="card-body">
                         <div class="form-group row">
                             <div class="col-lg-6">
                                 <label>Name:</label>
-                                <input type="text" class="form-control" name="name" value="" placeholder="Enter full name"/>
+                                <input type="text" class="form-control" name="name" value="{{$data->name}}" placeholder="Enter full name"/>
                                 <span class="form-text text-muted">Please enter emailtype/name</span>
                             </div>
                             <div class="col-lg-6">
                                 <label>From:</label>
-                                <input type="email" class="form-control" name="from_email" value=""placeholder="Enter contact number"/>
+                                <input type="email" class="form-control" name="from_email" value="{{$data->email_from}}" placeholder="Enter contact number"/>
                                 <span class="form-text text-muted">Please enter email from/address</span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6">
                                 <label>Subject:</label>
-                                <input type="text" class="form-control" name="subject" value="" placeholder="Enter full name"/>
+                                <input type="text" class="form-control" name="subject" value="{{$data->subject}}" placeholder="Enter full name"/>
                                 <span class="form-text text-muted">Please enter email subject</span>
                             </div>
                             <div class="col-lg-6">
                                 <label>Status:</label>
                                <select class="form-control"  name="status">
 
-                                   <option value="1">Active</option>
-                                   <option value="0">Deactive</option>
+                                   <option value="1" @if($data->status == 1) selected @endif>Active</option>
+                                   <option value="0" @if($data->status == 0) selected @endif>Deactive</option>
                                </select>
                             </div>
                         </div>
@@ -102,55 +102,67 @@
                             <div class="col-lg-6">
                                 <label>Image1:</label>
                                 <input class="form-control" name="img1" type="file" />
+                                @if(!empty($data->img1))
+                                <div><img src="{{$data->img1}}" width="100"></div>
+                                @endif
                             </div>
                             <div class="col-lg-6">
                                 <label>Image1 Button Link:</label>
-                                <input class="form-control" name="img1-button" type="text" />
+                                <input class="form-control" name="img1_button" type="text"  value="{{$data->img1_button}}"/>
                             </div>
                             <div class="col-12 mt-10">
                                 <div>
                                     <label class="text-right">Image 1 Detail</label>
-                                    <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                    <textarea class="summernote" name="body" id="kt_summernote_1">{{$data->descr}}</textarea>
                                 </div>
                             </div>
                             <div class="col-lg-6 mt-10">
                                 <label>Image2:</label>
                                 <input class="form-control" name="img2" type="file" />
-                            </div> 
+                                @if(!empty($data->img2))
+                                    <div><img src="{{$data->img2}}" width="100"></div>
+                                @endif
+                            </div>
                             <div class="col-lg-6 mt-10">
                                 <label>Image2 Button Link:</label>
-                                <input class="form-control" name="img2-button" type="text" />
+                                <input class="form-control" name="img2_button" type="text" value="{{$data->img2_button}}"/>
                             </div>
                             <div class="col-12 mt-10">
                                 <div>
                                     <label class="text-right">Image 2 Detail</label>
-                                    <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                    <textarea class="summernote" name="body2" id="kt_summernote_1">{{$data->body2}}</textarea>
                                 </div>
-                            </div>   
+                            </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-lg-6">
                                 <label>Image3:</label>
                                 <input class="form-control" name="img3" type="file" />
-                            </div> 
+                                @if(!empty($data->img3))
+                                    <div><img src="{{$data->img3}}" width="100"></div>
+                                @endif
+                            </div>
                             <div class="col-lg-6">
                                 <label>Image3 Button Link:</label>
-                                <input class="form-control" name="img3-button" type="text" />
+                                <input class="form-control" name="img3_button" type="text" value="{{$data->img3_button}}"/>
                             </div>
                             <div class="col-12 mt-10">
                                 <div>
                                     <label class="text-right">Image 3 Detail</label>
-                                    <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                    <textarea class="summernote" name="body3" id="kt_summernote_1">{{$data->body3}}</textarea>
                                 </div>
-                            </div>   
+                            </div>
                             <div class="col-lg-6 mt-10">
                                 <label>Banner Image:</label>
                                 <input class="form-control" name="bannerImg" type="file" />
+                                @if(!empty($data->bannerImg))
+                                    <div><img src="{{$data->bannerImg}}" width="100"></div>
+                                @endif
                                 <div class="mt-10">
                                     <label class="text-right">Banner Image Text</label>
-                                        <textarea class="summernote" name="body" id="kt_summernote_1"></textarea>
+                                        <textarea class="summernote" name="bannerText" id="kt_summernote_1">{{$data->bannerText}}</textarea>
                                     </div>
-                               </div>    
+                               </div>
                         </div>
                     </div>
                     <div class="card-footer">
