@@ -17,7 +17,7 @@
             </div>
             <div style="padding:40px 25px;text-align:center;border-width:0px 1px 1px 1px;border-style:solid;border-color:#d2d2d2;">
                 <p style="margin:0px;font-size:16px;"><?php echo $temp->descr; ?></p>
-                <h3>Your email: {{$email}}</h3>
+                <h3>Your email: {{$email}} {{asset($temp->img1)}}</h3>
                 <h3>Your password: {{$password}}</h3>
                 <h3><a href="{{asset('/login')}}">Click Here</a> To Login And Verify Your Account</h3>
                 <a href="{{$temp->img1_button}}" style="border:none;font-size:14px;color:#fff;background:#000;padding:10px 20px;text-decoration:none;
