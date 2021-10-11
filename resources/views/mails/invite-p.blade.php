@@ -1,5 +1,12 @@
-<div class="card-toolbar">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Templates</title>
+</head>
+<body style="margin:0px;padding:50px;">
     @php
     $temp=\App\Models\EmailTemplates::find(3);
     @endphp
@@ -51,5 +58,7 @@
             </div>
         </div>
     </div>
-</div>
+</body>
+</html>
+
 
