@@ -640,6 +640,27 @@
                                                                 </div>
                                                             </div>
 
+
+                                                            <div class="col-lg-4">
+                                                                <label>Primary Number</label>
+                                                                <div class='input-group'>
+                                                                    <input type="text" name="primary_no" id="edit-primary_no" placeholder="Enter Primary Number" class="form-control" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                    <label>Appellido</label>
+                                                                <div class='input-group'>
+                                                                    <input type="text" name="appellido" id="edit-appellido" placeholder="Enter Appellido" class="form-control" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <label>Positions</label>
+                                                                <select class="form-control" name="position" id="position">
+                                                                    <option value="POSITIONONE">Position 1</option>
+                                                                    <option value="POSITIONTWO">Position 2</option>
+                                                                </select>
+                                                            </div>
+
                                                             <h4 style="margin-left: 14px;">Emergency contact 2</h4>
                                                             <div class="col-lg-4"></div>
                                                             <div class="col-lg-4"></div>
@@ -680,22 +701,22 @@
                                                         <div class="row container">
                                                             <div class="col-sm-4">
                                                                 <button type="reset" class="btn btn-primary mr-2 my-1" data-dismiss="modal">Close</button>
-                                                           
-                                                               
+
+
                                                                      <button type="submit" class="btn btn-secondary my-1">Save</button>
                                                                   </div>
-                                                               
+
                                                               <div class="col-sm-8 ">
-                                                               
+
                                                                 <a href="" id="print_card" class="btn btn-primary mr-2 print-data my-1">View And Print</a>
-                                                          
+
 
                                                                <a  class="btn btn-secondary my-1">Print Summary</a>
                                                                     </div>
 
 
-                                                                
-                                                           
+
+
                                                         </div>
                                                     </div>
                                                 </form>
@@ -886,7 +907,7 @@
 
 
                             </tr>
-                        @endif    
+                        @endif
                         @endforeach
 
 
@@ -1012,6 +1033,9 @@ $(document).ready(function(){
 
                     $('#show-courses').html(dataa.courses);
                     $('#edit-u-t-c').html(dataa.total);
+                    $('#edit-primary_no').val(data.primary_no);
+                    $('#edit-appellido').val(data.appellido);
+                    $('#position').val(data.position);
 
 
                 }

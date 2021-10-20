@@ -8,6 +8,7 @@ use App\Models\AcknowledgmentForms;
 use App\Models\Assignment;
 use App\Models\AssignQuestion;
 use App\Models\AssignCommon;
+use App\Models\Admin\Folder;
 use App\Models\course;
 use App\Models\Form;
 use App\Models\User;
@@ -30,6 +31,8 @@ use App\Notifications\NewUserNotification;
 use App\Listeners\SendNewUserNotification;
 // use App\AssignmentDetail;
 use App\Models\AssignmentDetail;
+use App\Models\WorkerHasToolbox;
+use App\Models\Toolbox;
 
 class AssignmentController extends Controller
 {
@@ -68,7 +71,7 @@ class AssignmentController extends Controller
 //            $as->company_id=Auth::user()->company_id;
              $as->file= $video->video_file;
              $as->save();
-            
+
             $assignment_details = [
                     'course_id' => $request->course_id,
                     'assignment_id' => $as->id,
@@ -188,6 +191,7 @@ class AssignmentController extends Controller
         return $view;
 
     }
+
     public function invitecommon(Request $request){
 
         $this->validate($request, [
@@ -441,10 +445,27 @@ class AssignmentController extends Controller
         return view('dashboard1.assignment.all',compact('videos','assinments'));
         }
         if (Auth::user()->hasRole('User')) {
-
             $assinments = Worker::find(Auth::user()->user_personel->id)->coursess;
             return view('dashboard1.assignment.user.all',compact('assinments'));
         }
+    }
+
+    public function your_assignments(Request $request)
+    {
+        $assinments=WorkerHasToolbox::where('worker_id',Auth::user()->id)->get();
+        $allAssignments=array();
+        foreach ($assinments as $assinment){
+            $folder=Folder::find($assinment->folder_id);
+            $toolbox=Toolbox::find($assinment->toolbox_id);
+            $assinment->folder=$folder;
+            $assinment->toolbox=$toolbox;
+            $assinment->url=$folder->type.'/'.$folder->name.'/'.$toolbox->name;
+            $assinment->name=$toolbox->name;
+            $allAssignments[]=$assinment;
+        }
+        $assigncourses = worker_course::where('w_id', Auth::user()->user_personel->id)->get();
+
+        return view('dashboard1.assignment.user.yourassignments',array('allAssignments'=>$allAssignments,'assigncourses'=>$assigncourses));
     }
 
 

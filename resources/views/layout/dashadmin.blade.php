@@ -97,7 +97,24 @@
 
 					<!--begin::Menu Nav-->
 					<ul class="menu-nav">
-						<li class="menu-item menu-item-submenu" aria-haspopup="true">
+                        <li class="menu-item {{request()->is('profile')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
+                            <a href="{{url('admin/profile')}}" class="menu-link menu-toggle">
+                <span class="svg-icon menu-icon">
+                    <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
+                   <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/User.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<polygon points="0 0 24 0 24 24 0 24"/>
+					<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+					<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+					</g>
+				</svg>
+                       <!--end::Svg Icon--></span>
+                    <!--end::Svg Icon-->
+              			  				</span>
+                                <span class="menu-text">Your Profile/Tu perfil</span>
+                            </a>
+                        </li>
+                        <li class="menu-item menu-item-submenu" aria-haspopup="true">
 							<a href="{{url('/dashboard2')}}" class="menu-link">
                			 <span class="svg-icon menu-icon">
                     <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
@@ -295,7 +312,8 @@
                     </svg>
 					<!--end::Svg Icon-->
                 </span>
-								<span class="menu-text">Course Statistics</span>
+								<!--<span class="menu-text">Course Statistics</span>-->
+								<span class="menu-text">Test Results /Resultados de la prueba</span>
 							</a>
 						</li>
 
@@ -360,7 +378,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+						<li class="menu-item menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
 							<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Design/Bucket.svg-->
@@ -373,7 +391,8 @@
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-								<span class="menu-text">Partner Library</span>
+								<!--<span class="menu-text">Partner Library</span>-->
+								<span class="menu-text">PARTNERS/SOCIOS</span>
 								<i class="menu-arrow"></i>
 							</a>
 							<div class="menu-submenu" style="display: none; overflow: hidden;" kt-hidden-height="80">
@@ -438,6 +457,8 @@
 								<span class="menu-text">Resources</span>
 							</a>
 						</li>
+                        @if(Auth::user()->hasRole('Admin') || Auth::user()->hasRole('Manager'))
+
                         <li class="menu-item menu-item-submenu {{request()->is('toolbox-seetings')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
                             <a href="{{url('toolbox-seetings')}}" class="menu-link menu-toggle">
 							<!-- toolbox-talk -->
@@ -455,7 +476,7 @@
                                 <span class="menu-text">Toolbox Talks</span>
                             </a>
                         </li>
-
+                        @endif
 
 						<li class="menu-item {{request()->is('users')?'menu-item-active':''}}" >
 							<a  href="{{route('users.index')}}" class="menu-link">
@@ -554,13 +575,13 @@
 											</svg>
                                             <!--end::Svg Icon-->
 										</span>
-                                <span class="menu-text">Forms</span>
+                                <span class="menu-text">Forms/Formas</span>
                                 <i class="menu-arrow"></i>
                             </a>
                             <div class="menu-submenu" style="display: none; overflow: hidden;" kt-hidden-height="80">
+                                class="menu-subnav">
                                 <i class="menu-arrow"></i>
-                                <ul class="menu-subnav">
-                                    <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <ul <li class="menu-item menu-item-parent" aria-haspopup="true">
 												<span class="menu-link">
 													<span class="menu-text">Forms</span>
 												</span>
@@ -603,23 +624,7 @@
                             </div>
                         </li>
 
-                        <li class="menu-item {{request()->is('profile')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
-							<a href="{{url('admin/profile')}}" class="menu-link menu-toggle">
-                <span class="svg-icon menu-icon">
-                    <!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
-                   <span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/User.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-					<polygon points="0 0 24 0 24 24 0 24"/>
-					<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
-					<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
-					</g>
-				</svg>
-					   <!--end::Svg Icon--></span>
-					<!--end::Svg Icon-->
-              			  				</span>
-								<span class="menu-text">Your Profile</span>
-							</a>
-						</li>
+
 						<li class="menu-item {{request()->is('user-managment')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
 							<a href="{{url('admin/user-managment')}}" class="menu-link menu-toggle">
                		 <span class="svg-icon menu-icon">
@@ -637,7 +642,22 @@
 								<span class="menu-text">User Management</span>
 							</a>
 						</li>
-
+                <li class="menu-item menu-item-submenu {{request()->is('faq')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                <span class="svg-icon menu-icon">
+                    <!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Box2.svg-->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24" />
+                            <path d="M4,9.67471899 L10.880262,13.6470401 C10.9543486,13.689814 11.0320333,13.7207107 11.1111111,13.740321 L11.1111111,21.4444444 L4.49070127,17.526473 C4.18655139,17.3464765 4,17.0193034 4,16.6658832 L4,9.67471899 Z M20,9.56911707 L20,16.6658832 C20,17.0193034 19.8134486,17.3464765 19.5092987,17.526473 L12.8888889,21.4444444 L12.8888889,13.6728275 C12.9050191,13.6647696 12.9210067,13.6561758 12.9368301,13.6470401 L20,9.56911707 Z" fill="#000000" />
+                            <path d="M4.21611835,7.74669402 C4.30015839,7.64056877 4.40623188,7.55087574 4.5299008,7.48500698 L11.5299008,3.75665466 C11.8237589,3.60013944 12.1762411,3.60013944 12.4700992,3.75665466 L19.4700992,7.48500698 C19.5654307,7.53578262 19.6503066,7.60071528 19.7226939,7.67641889 L12.0479413,12.1074394 C11.9974761,12.1365754 11.9509488,12.1699127 11.9085461,12.2067543 C11.8661433,12.1699127 11.819616,12.1365754 11.7691509,12.1074394 L4.21611835,7.74669402 Z" fill="#000000" opacity="0.3" />
+                        </g>
+                    </svg>
+                    <!--end::Svg Icon-->
+                </span>
+                        <span class="menu-text">FAQ/PREGUNTAS</span>
+                    </a>
+                </li>
 						<li class="menu-item menu-item-submenu {{request()->is('javascript')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
 							<a href="javascript:;" class="menu-link menu-toggle">
                 <span class="svg-icon menu-icon">
@@ -651,7 +671,7 @@
                     </svg>
 					<!--end::Svg Icon-->
                 </span>
-								<span class="menu-text">Log out</span>
+								<span class="menu-text">Log out/Cerrar Sesion</span>
 							</a>
 						</li>
 
@@ -766,7 +786,7 @@
 					</a>
 					<form method="POST" action="{{url('/logout')}}">
 						@csrf
-						<button type="submit" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</button>
+						<button type="submit" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Log Out/Cerrar Sesion</button>
 					</form>
 				</div>
 			</div>

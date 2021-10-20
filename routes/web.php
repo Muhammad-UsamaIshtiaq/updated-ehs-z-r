@@ -100,7 +100,6 @@ Route::group(['middleware' => ['auth','role:Admin']], function() {
     Route::get('admin-resources-signature/{id}',[\App\Http\Controllers\ResourcesController::class,'v_all_signs'])->name('v.all.signs');
     Route::get('worker-resend-mail/{id}',[\App\Http\Controllers\Admin\WorkersController::class,'resend_mail'])->name('worker.resend_mail');
     Route::get('Export/{type}/{table}',[\App\Http\Controllers\ExportController::class,'Export_Record'])->name('Export_Record');
-
     });
 
 Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','role:Admin']],function () {
@@ -242,6 +241,7 @@ Route::group(['middleware' => ['auth','role:User|Manager|Fleet Manager|Human Res
     Route::get('/all-notification',[\App\Http\Controllers\NotificationController::class,'show_all'])->name('all.notifi');
     Route::post('/accept-invitaion',[\App\Http\Controllers\NotificationController::class,'accept_invitaion'])->name('accept.invitaion');
     Route::get('allassignments', [App\Http\Controllers\Admin\AssignmentController::class,'all_assignments'])->name('allassignmnet');
+    Route::get('your_assignments', [App\Http\Controllers\Admin\AssignmentController::class,'your_assignments'])->name('your_assignments');
 
 
 

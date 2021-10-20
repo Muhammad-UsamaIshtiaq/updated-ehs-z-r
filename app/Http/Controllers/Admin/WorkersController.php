@@ -36,7 +36,9 @@ class WorkersController extends Controller
         $projects=Projects::where('company_id','=',Auth::User()->company_id)->get();
         $assigncourses=worker_course::all();
         $user = User::find( Auth::user()->id);
+
         if($user->hasAnyRole(3,4,5,6,7,8,9,10)){
+
             return view('dashboard1.User.all-personel',compact('rolls','departments','assigncourses','workers','courses','projects'));
         }else{
             return view('dashboard2.users.personnel',compact('rolls','departments','assigncourses','workers','courses','projects'));
@@ -223,6 +225,9 @@ class WorkersController extends Controller
         $add->em_lname2 =$request->em_lname2 ;
         $add->em_no =$request->em_no ;
         $add->em_no2 =$request->em_no2 ;
+        $add->primary_no =$request->primary_no ;
+        $add->appellido =$request->appellido ;
+        $add->position =$request->position ;
         if ($request->usr_img == ''){
             $file1='';
         }else{
