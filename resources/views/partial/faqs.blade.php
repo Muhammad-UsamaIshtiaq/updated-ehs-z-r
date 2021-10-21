@@ -66,7 +66,7 @@
                 <div class="modal-body p-0">
                     <div class="row">
                         <div class="col-12">
-                            <form class="form" action="{{route('faq.store')}}" method="post">
+                            <form class="form" action="{{route('faq.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                     <div class="form-group row">
@@ -83,6 +83,36 @@
                                                 <textarea name="ans" class="form-control" rows="5">
                                                 </textarea>
                                             </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="videoUpload">Video/External link</label>
+                                            <div class="input-group">
+                                                <select class="form-control" onchange="video_change()" id="change_vid" name="type">
+                                                    <option value="1">Video</option>
+                                                    <option value="2">External Link</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 " id="from_pc">
+                                            <label for="videoUpload">Video Upload</label>
+                                            <div class="input-group">
+                                                <input type="file"  name="videofile" id="videoUpload" class='form-control'>
+                                            </div>
+                                            <span class="form-text text-muted">Please Upload Video File</span>
+                                        </div>
+                                        <div class="col-12 " id="from_ex">
+                                            <label for="videoUpload">Video Link</label>
+                                            <div class="input-group">
+                                                <input type="text"  id="from_ex_ch" name="videolink"  class='form-control from_ex_ch'>
+                                            </div>
+                                            <span class="form-text text-muted">Please Upload Video File</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="videoUpload">Video Thumbnail</label>
+                                            <div class="input-group">
+                                                <input type="file" required="" name="videothumbnail" id="videoUpload" class='form-control'>
+                                            </div>
+                                            <span class="form-text text-muted">Please Upload Video Thumbnail</span>
                                         </div>
 
                                     </div>
@@ -115,7 +145,7 @@
                 <div class="modal-body p-0">
                     <div class="row">
                         <div class="col-12">
-                            <form class="form" action="" method="post" id="edit-form">
+                            <form class="form" action="" method="post" id="edit-form" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <input type="hidden" id="edit-id" name="id">
@@ -134,6 +164,36 @@
                                                 <textarea name="ans" id="edit_ans" class="form-control" rows="5">
                                                 </textarea>
                                             </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="videoUpload">Video/External link</label>
+                                            <div class="input-group">
+                                                <select class="form-control" onchange="video_changeedit()" id="edit_change_vid" name="type">
+                                                    <option value="1">Video</option>
+                                                    <option value="2">External Link</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" id="edit_from_pc">
+                                            <label for="videoUpload">Video Upload</label>
+                                            <div class="input-group">
+                                                <input type="file"  name="videofile" id="editvideoUpload" class='form-control'>
+                                            </div>
+                                            <span class="form-text text-muted">Please Upload Video File</span>
+                                        </div>
+                                        <div class="col-12 from_ex" id="editfrom_ex">
+                                            <label for="videoUpload">Video Link</label>
+                                            <div class="input-group">
+                                                <input type="text"  id="editfrom_ex_ch" name="videolink"  class='form-control from_ex_ch'>
+                                            </div>
+                                            <span class="form-text text-muted">Please Upload Video File</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="videoUpload">Video Thumbnail</label>
+                                            <div class="input-group">
+                                                <input type="file"  name="videothumbnail" id="editvideoUpload" class='form-control'>
+                                            </div>
+                                            <span class="form-text text-muted">Please Upload Video Thumbnail</span>
                                         </div>
 
                                     </div>
@@ -223,6 +283,25 @@
                                         </div>
 
                                         {{$q->answer}}</div>
+                                    @if(!empty($q->video))
+                                    <div class="card-body text-dark-50 font-size-lg pl-12">
+                                        <div class="row mb-4 mt-4 container">
+                                            <div class="card" style="">
+                                                @if($q->video_type=='2')
+                                                    <a href="{{$q->video}}" >
+                                                    <img src="{{ URL::to('/') }}/assets/patnerlibrary/thumbnails/{{$q->thumbnail}}" style="height: 150px !important;width: 100%;" class="card-img">
+                                                    </a>
+                                                        @else
+                                                            <a href="{{route('faq.show',$q->id)}}" >
+                                                                <img src="{{ URL::to('/') }}/assets/patnerlibrary/thumbnails/{{$q->thumbnail}}" style="height: 150px !important;width: 100%;" class="card-img">
+                                                            </a>
+
+                                                @endif
+                                                    </div>
+                                        </div>
+                                    </div>
+                                    @endif
+
                                 </div>
                                 <!--end::Body-->
                             </div>
@@ -285,15 +364,44 @@
                     $('#edit-id').val(data.id);
                     $('#edit-form').attr('action',url2);
                     $('#edit_ans').val(data.answer);
+                    $('#edit_change_vid').val(data.video_type).change();
                     $('#edit_q').val(data.question);
+
+
+
 
                 }
             });
         }
 
 
+        $('#from_ex').hide();
 
 
+        function video_change() {
+            var v=$("#change_vid").val();
+            if(v == 1){
+                $('#from_pc').show();
+                $('#from_ex').hide();
+                $('#from_ex_ch').val('');
+            }
+            if(v == 2){
+                $('#from_pc').hide();
+                $('#from_ex').show();
+            }
+        }
+        function video_changeedit() {
+            var v=$("#edit_change_vid").val();
+            if(v == 1){
+                $('#edit_from_pc').show();
+                $('#editfrom_ex').hide();
+                $('$editfrom_ex_ch').val('');
+            }
+            if(v == 2){
+                $('#edit_from_pc').hide();
+                $('#editfrom_ex').show();
+            }
+        }
     </script>
 
 

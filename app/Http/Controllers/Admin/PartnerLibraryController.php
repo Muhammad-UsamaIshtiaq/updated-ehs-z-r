@@ -73,7 +73,7 @@ class PartnerLibraryController extends Controller
 
 
             $extension = pathinfo($url, PATHINFO_EXTENSION);
-            $video_file = rand().'.'. $extension;
+            $video_file = time().'.'. $extension;
             try {
                 $file = file_get_contents($url);
                 file_put_contents(public_path().'/assets/patnerlibrary/'.$video_file, $file);
