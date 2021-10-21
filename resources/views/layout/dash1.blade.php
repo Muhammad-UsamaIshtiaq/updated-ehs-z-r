@@ -96,7 +96,24 @@
 
 					<!--begin::Menu Nav-->
 					<ul class="menu-nav">
-						<li  class="menu-item {{request()->is('home')?'menu-item-active':''}}" aria-haspopup="true" >
+                        <li class="menu-item {{request()->is('changepass')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
+                            <a href="{{url('changepass')}}" class="menu-link menu-toggle">
+									<span class="svg-icon menu-icon">
+										<!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
+										<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/User.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<polygon points="0 0 24 0 24 24 0 24"/>
+												<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+												<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
+											</g>
+										</svg>
+                                            <!--end::Svg Icon--></span>
+                                        <!--end::Svg Icon-->
+									</span>
+                                <span class="menu-text">Your Profile/ Tu perfill</span>
+                            </a>
+                        </li>
+                        <li  class="menu-item {{request()->is('home')?'menu-item-active':''}}" aria-haspopup="true" >
 							<a href="{{url('/home')}}" class="menu-link">
 									<span class="svg-icon menu-icon">
 										<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
@@ -131,7 +148,7 @@
 										</svg>
 										<!--end::Svg Icon-->
 									</span>
-									<span class="menu-text">Course Statistics</span>
+									<span class="menu-text">Course Statistics / Estadisticas del curso</span>
 
 								</a>
 							</li>
@@ -209,7 +226,7 @@
                     </g>
                     </svg>
                  </span>
-                                    <span class="menu-text">Your Assignments</span>
+                                    <span class="menu-text">Your Assignments /Tus asignaciones</span>
                                 </a>
                             </li>
                         @endif
@@ -263,7 +280,7 @@
 										</svg>
 										<!--end::Svg Icon-->
 									</span>
-									<span class="menu-text">Resources</span>
+									<span class="menu-text">Resources/Recursos</span>
 								</a>
 							</li>
 						@endif
@@ -280,10 +297,10 @@
 										</svg>
                                         <!--end::Svg Icon-->
 									</span>
-                                <span class="menu-text">Forms</span>
+                                <span class="menu-text">Forms/Formas</span>
                             </a>
                         </li>
-                        @if(!Auth::user()->hasRole('Admin'))
+                        @if(Auth::user()->hasRole('Admin') || Auth::user()->hasRole('Manager'))
                         <li class="menu-item menu-item-submenu {{request()->is('toolbox-seetings')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
                             <a href="{{url('toolbox-seetings')}}" class="menu-link menu-toggle">
                      <span class="svg-icon menu-icon">
@@ -320,23 +337,7 @@
 						</li>
                         @endif
 
-						<li class="menu-item {{request()->is('changepass')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
-							<a href="{{url('changepass')}}" class="menu-link menu-toggle">
-									<span class="svg-icon menu-icon">
-										<!--begin::Svg Icon | path:assets/media/svg/icons/Files/Upload.svg-->
-										<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2021-04-09-093151/theme/html/demo1/dist/../src/media/svg/icons/General/User.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-												<polygon points="0 0 24 0 24 24 0 24"/>
-												<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
-												<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"/>
-											</g>
-										</svg>
-											<!--end::Svg Icon--></span>
-										<!--end::Svg Icon-->
-									</span>
-								<span class="menu-text">Your Profile</span>
-							</a>
-						</li>
+
                         @if(Auth::user()->hasRole('User'))
                         <li class="menu-item {{request()->is('worker-print-card')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
 							<a href ="{{url('worker-print-card')}}/{{Auth::user()->user_personel->id}}" class="menu-link menu-toggle">
@@ -352,7 +353,7 @@
 											<!--end::Svg Icon--></span>
 										<!--end::Svg Icon-->
 									</span>
-								<span class="menu-text">ID Card</span>
+								<span class="menu-text">ID Card/Tarjeta de identification</span>
 							</a>
 						</li>
 
@@ -370,7 +371,7 @@
                     </svg>
                     <!--end::Svg Icon-->
                 </span>
-                                <span class="menu-text">Partner Library</span>
+                                <span class="menu-text">PARTNERS / SOCIOS</span>
                             </a>
                         </li>
                         <li class="menu-item menu-item-submenu {{request()->is('faq')?'menu-item-active':''}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -387,7 +388,7 @@
                     </svg>
                     <!--end::Svg Icon-->
                 </span>
-                                <span class="menu-text">FAQ</span>
+                                <span class="menu-text">FAQ / PREGUNTAS</span>
                             </a>
                         </li>
 
@@ -406,7 +407,7 @@
 										</svg>
 										<!--end::Svg Icon-->
 									</span>
-								<span class="menu-text">Log Out</span>
+								<span class="menu-text">Log Out / Cerrar Sesion</span>
 							</a>
 						</li>
 					</ul>
