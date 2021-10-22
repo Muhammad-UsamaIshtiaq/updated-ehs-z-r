@@ -16,12 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Permission;
 
-
-
 Auth::routes();
-
-
-
 Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('cache:clear');
     return '<h1>Clear Cache cleared</h1>';
@@ -54,6 +49,7 @@ Route::group(['as' => 'master.','middleware' => ['masterauth']],function () {
 
     Route::resource('master/companies', CompaniesController::class);
      Route::get('master/login',[\App\Http\Controllers\Master\MasterController::class,'index'])->name('index');
+     Route::get('master/signup',[\App\Http\Controllers\Master\MasterController::class,'mastersignup'])->name('mastersignup');
     Route::get('master/dashboard',[\App\Http\Controllers\Master\MasterController::class,'dashboard'])->name('dashboard');
     Route::get('master/secret/login/{id}',[\App\Http\Controllers\Master\MasterController::class,'secret_login'])->name('secret.login');
 
