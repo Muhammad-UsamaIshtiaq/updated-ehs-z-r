@@ -83,10 +83,10 @@
                             </div>
                         </div>
                     </form>
-                    <!--<div class="mt-10">-->
-                    <!--	<span class="opacity-40 mr-4">Don't have an account yet?</span>-->
-                <!--	<a href="{{url('register')}}" id="kt_login_signup" class="text-white opacity-30 font-weight-normal">Sign Up</a>-->
-                    <!--</div>-->
+                    <div class="mt-10">
+                    <span class="opacity-40 mr-4">Don't have an account yet?</span>
+                <a href="{{url('mastersignup')}}" id="kt_login_signup" class="text-white opacity-30 font-weight-normal">Sign Up</a>
+                    </div>
                 </div>
 
             </div>
